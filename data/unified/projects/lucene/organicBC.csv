@@ -1,0 +1,17 @@
+lucene;org.apache.lucene.spatial3d.TestGeo3DPoint;BrainClass
+lucene;org.apache.lucene.spatial3d.geom.Plane;BrainClass
+lucene;org.apache.lucene.spatial3d.geom.GeoPolygonFactory;BrainClass
+lucene;org.apache.lucene.codecs.memory.DirectPostingsFormat.DirectField.DirectIntersectTermsEnum;BrainClass
+lucene;org.apache.lucene.util.fst.TestFSTs;BrainClass
+lucene;org.apache.lucene.index.TestIndexingSequenceNumbers;BrainClass
+lucene;org.apache.lucene.index.IndexWriter;BrainClass
+lucene;org.apache.lucene.index.CheckIndex;BrainClass
+lucene;org.apache.lucene.tests.analysis.BaseTokenStreamTestCase;BrainClass
+lucene;org.apache.lucene.tests.index.RandomPostingsTester;BrainClass
+lucene;org.apache.lucene.analysis.hunspell.Dictionary;BrainClass
+lucene;org.apache.lucene.analysis.ja.dict.ToStringUtil;BrainClass
+lucene;org.apache.lucene.facet.TestDrillSideways;BrainClass
+lucene;org.apache.lucene.search.grouping.TestGrouping;BrainClass
+lucene;org.apache.lucene.queryparser.flexible.standard.parser.StandardSyntaxParserTokenManager;BrainClass
+lucene;org.apache.lucene.queryparser.surround.parser.QueryParserTokenManager;BrainClass
+lucene;org.apache.lucene.queryparser.classic.QueryParserTokenManager;BrainClass

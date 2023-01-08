@@ -1,0 +1,4 @@
+camel;org.apache.camel.component.bean.BeanInfo;ShotgunSurgery
+camel;org.apache.camel.util.ObjectHelper;ShotgunSurgery
+camel;org.apache.camel.converter.jaxp.XmlConverter;ShotgunSurgery
+camel;org.apache.camel.impl.ServiceSupport;ShotgunSurgery

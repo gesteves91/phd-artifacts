@@ -1,0 +1,13 @@
+neo4j;org.neo4j.kernel.impl.core.TestRelationship;GodClass
+neo4j;org.neo4j.kernel.impl.nioneo.store.TestPropertyBlocks;GodClass
+neo4j;org.neo4j.kernel.impl.core.NodeManager;GodClass
+neo4j;org.neo4j.kernel.impl.nioneo.xa.WriteTransaction;GodClass
+neo4j;org.neo4j.kernel.impl.nioneo.xa.Command;GodClass
+neo4j;org.neo4j.kernel.impl.transaction.xaframework.XaLogicalLog;GodClass
+neo4j;org.neo4j.kernel.InternalAbstractGraphDatabase;GodClass
+neo4j;org.neo4j.server.rest.web.DatabaseActions;GodClass
+neo4j;org.neo4j.index.impl.lucene.TestLuceneIndex;GodClass
+neo4j;matching.TestPatternMatching;GodClass
+neo4j;org.neo4j.shell.util.json.JSONObject;GodClass
+neo4j;org.neo4j.kernel.ha.cluster.zoo.ZooClient;GodClass
+neo4j;org.neo4j.consistency.checking.RelationshipRecordCheckTest;GodClass

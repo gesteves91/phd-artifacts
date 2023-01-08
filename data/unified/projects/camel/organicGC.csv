@@ -1,0 +1,2 @@
+camel;org.apache.camel.component.jms.JmsConfiguration;GodClass
+camel;org.apache.camel.model.ProcessorType;GodClass

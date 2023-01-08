@@ -1,0 +1,9 @@
+elasticsearch;org.elasticsearch.common.xcontent.XContentBuilder;BrainClass
+elasticsearch;org.elasticsearch.gateway.local.state.meta.LocalGatewayMetaState;BrainClass
+elasticsearch;org.elasticsearch.search.suggest.phrase.PhraseSuggestParser;BrainClass
+elasticsearch;org.elasticsearch.search.controller.SearchPhaseController;BrainClass
+elasticsearch;org.elasticsearch.search.internal.InternalSearchHit;BrainClass
+elasticsearch;org.elasticsearch.index.mapper.object.ObjectMapper;BrainClass
+elasticsearch;jsr166y.ForkJoinPool;BrainClass
+elasticsearch;jsr166e.ForkJoinPool;BrainClass
+elasticsearch;jsr166e.ConcurrentHashMapV8;BrainClass

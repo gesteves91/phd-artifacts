@@ -1,0 +1,3 @@
+neo4j;org.neo4j.kernel.impl.core.Primitive;BrainClass
+neo4j;org.neo4j.kernel.impl.nioneo.xa.WriteTransaction;BrainClass
+neo4j;org.neo4j.consistency.checking.old.ConsistencyRecordProcessor;BrainClass

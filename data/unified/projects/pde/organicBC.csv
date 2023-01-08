@@ -1,0 +1,16 @@
+pde;org.eclipse.pde.unittest.junit.launcher.JUnitPluginLaunchConfigurationDelegate;BrainClass
+pde;org.eclipse.pde.internal.core.project.BundleProjectDescription;BrainClass
+pde;org.eclipse.pde.internal.core.builders.BundleErrorReporter;BrainClass
+pde;org.eclipse.pde.internal.core.builders.SourceEntryErrorReporter;BrainClass
+pde;org.eclipse.pde.internal.core.builders.BuildErrorReporter;BrainClass
+pde;org.eclipse.pde.internal.core.exports.FeatureExportOperation;BrainClass
+pde;org.eclipse.pde.internal.core.target.TargetDefinition;BrainClass
+pde;org.eclipse.pde.internal.ui.preferences.TargetPlatformPreferencePage;BrainClass
+pde;org.eclipse.pde.internal.ui.editor.schema.ElementSection;BrainClass
+pde;org.eclipse.pde.internal.ui.editor.plugin.ImportPackageSection;BrainClass
+pde;org.eclipse.pde.internal.ui.shared.target.StyledBundleLabelProvider;BrainClass
+pde;org.eclipse.pde.api.tools.internal.util.Util;BrainClass
+pde;org.eclipse.pde.api.tools.internal.builder.ApiAnalysisBuilder;BrainClass
+pde;org.eclipse.pde.api.tools.internal.builder.BaseApiAnalyzer;BrainClass
+pde;org.eclipse.pde.api.tools.internal.builder.TagValidator;BrainClass
+pde;org.eclipse.pde.api.tools.internal.provisional.comparator.ApiComparator;BrainClass

@@ -1,0 +1,11 @@
+camel;org.apache.camel.component.cxf.soap.headers.HeaderTesterImpl;BrainMethod
+camel;org.apache.camel.spring.handler.CamelNamespaceHandler.CamelContextBeanDefinitionParser;BrainMethod
+camel;org.apache.camel.component.file.remote.FtpConsumer;BrainMethod
+camel;org.apache.camel.component.file.remote.SftpConsumer;BrainMethod
+camel;org.apache.camel.component.jms.JmsBinding;BrainMethod
+camel;org.apache.camel.component.bean.BeanInfo;BrainMethod
+camel;org.apache.camel.util.ObjectHelper;BrainMethod
+camel;org.apache.camel.builder.xml.MessageVariableResolver;BrainMethod
+camel;org.apache.camel.impl.converter.AnnotationTypeConverterLoader;BrainMethod
+camel;org.apache.camel.impl.converter.ArrayTypeConverter;BrainMethod
+camel;org.apache.camel.view.NodeData;BrainMethod

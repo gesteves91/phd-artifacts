@@ -1,0 +1,15 @@
+neo4j;org.neo4j.test.subprocess.SubProcessTestRunner;BrainMethod
+neo4j;org.neo4j.kernel.impl.core.Primitive;BrainMethod
+neo4j;org.neo4j.kernel.impl.core.Primitive;BrainMethod
+neo4j;org.neo4j.kernel.impl.nioneo.xa.WriteTransaction;BrainMethod
+neo4j;org.neo4j.kernel.impl.transaction.TxLog;BrainMethod
+neo4j;org.neo4j.kernel.InternalAbstractGraphDatabase.DependencyResolverImpl;BrainMethod
+neo4j;org.neo4j.server.plugins.ResultConverter;BrainMethod
+neo4j;org.neo4j.index.impl.lucene.PerformanceAndSanityIT;BrainMethod
+neo4j;org.neo4j.graphalgo.impl.shortestpath.Dijkstra.DijstraIterator;BrainMethod
+neo4j;org.neo4j.shell.kernel.apps.IndexProviderShellApp;BrainMethod
+neo4j;org.neo4j.shell.kernel.apps.Cd;BrainMethod
+neo4j;org.neo4j.shell.kernel.apps.Trav;BrainMethod
+neo4j;org.neo4j.kernel.ha.cluster.zoo.ZooClient.WatcherImpl;BrainMethod
+neo4j;org.neo4j.consistency.checking.old.ConsistencyRecordProcessor;BrainMethod
+neo4j;org.neo4j.consistency.checking.old.ConsistencyRecordProcessor;BrainMethod

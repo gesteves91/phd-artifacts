@@ -1,0 +1,10 @@
+titan;com.thinkaurelius.titan.hadoop.HadoopPipeline;GodClass
+titan;com.thinkaurelius.titan.diskstorage.indexing.IndexProviderTest;GodClass
+titan;com.thinkaurelius.titan.diskstorage.KeyColumnValueStoreTest;GodClass
+titan;com.thinkaurelius.titan.graphdb.TitanIndexTest;GodClass
+titan;com.thinkaurelius.titan.graphdb.TitanGraphTest;GodClass
+titan;com.thinkaurelius.titan.diskstorage.solr.SolrIndex;GodClass
+titan;com.thinkaurelius.titan.diskstorage.es.ElasticSearchIndex;GodClass
+titan;com.thinkaurelius.titan.graphdb.configuration.GraphDatabaseConfiguration;GodClass
+titan;com.thinkaurelius.titan.graphdb.database.management.ManagementSystem;GodClass
+titan;com.thinkaurelius.titan.graphdb.transaction.StandardTitanTx;GodClass

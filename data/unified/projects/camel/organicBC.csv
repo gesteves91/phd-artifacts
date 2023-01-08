@@ -1,0 +1,3 @@
+camel;org.apache.camel.component.jms.JmsBinding;BrainClass
+camel;org.apache.camel.component.bean.BeanInfo;BrainClass
+camel;org.apache.camel.util.ObjectHelper;BrainClass

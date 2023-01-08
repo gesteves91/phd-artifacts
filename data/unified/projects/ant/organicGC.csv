@@ -1,0 +1,8 @@
+ant;org.apache.tools.ant.IntrospectionHelper;GodClass
+ant;org.apache.tools.ant.taskdefs.Javadoc;GodClass
+ant;org.apache.tools.ant.taskdefs.optional.net.FTP;GodClass
+ant;org.apache.tools.ant.taskdefs.optional.junit.JUnitTask;GodClass
+ant;org.apache.tools.ant.taskdefs.optional.ejb.IPlanetEjbc;GodClass
+ant;org.apache.tools.ant.taskdefs.Zip;GodClass
+ant;org.apache.tools.ant.Project;GodClass
+ant;org.apache.tools.bzip2.CBZip2OutputStream;GodClass

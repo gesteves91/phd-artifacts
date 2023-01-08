@@ -1,0 +1,4 @@
+broadleaf;org.broadleafcommerce.common.site.domain.ThemeDTO;ClassDataShouldBePrivate
+broadleaf;org.broadleafcommerce.core.offer.service.discount.domain.PromotableFulfillmentGroupImpl;ClassDataShouldBePrivate
+broadleaf;org.broadleafcommerce.profile.core.service.IdGenerationServiceImpl;ClassDataShouldBePrivate
+broadleaf;org.broadleafcommerce.profile.core.service.IdGenerationServiceImpl.Id;ClassDataShouldBePrivate

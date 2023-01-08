@@ -1,0 +1,6 @@
+broadleaf;org.broadleafcommerce.core.offer.service.OfferDataItemProvider;GodClass
+broadleaf;org.broadleafcommerce.core.catalog.domain.CategoryImpl;GodClass
+broadleaf;org.broadleafcommerce.core.order.service.legacy.LegacyOrderServiceImpl;GodClass
+broadleaf;org.broadleafcommerce.openadmin.server.service.persistence.module.BasicPersistenceModule;GodClass
+broadleaf;org.broadleafcommerce.openadmin.server.dao.provider.metadata.BasicFieldMetadataProvider;GodClass
+broadleaf;org.broadleafcommerce.openadmin.server.dao.DynamicEntityDaoImpl;GodClass

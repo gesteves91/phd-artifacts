@@ -1,0 +1,14 @@
+xalan;org.apache.xalan.xsltc.compiler.Step;MessageChain
+xalan;org.apache.xalan.xsltc.compiler.Output;MessageChain
+xalan;org.apache.xalan.xsltc.compiler.util.MethodType;MessageChain
+xalan;org.apache.xalan.xsltc.compiler.Param;MessageChain
+xalan;org.apache.xalan.xsltc.compiler.Variable;MessageChain
+xalan;org.apache.xalan.xsltc.compiler.FunctionCall;MessageChain
+xalan;org.apache.xalan.xsltc.compiler.FunctionCall;MessageChain
+xalan;org.apache.xalan.xsltc.compiler.CallTemplate;MessageChain
+xalan;org.apache.xalan.xsltc.compiler.StepPattern;MessageChain
+xalan;org.apache.xalan.xsltc.runtime.BasisLibrary;MessageChain
+xalan;org.apache.xalan.processor.StylesheetHandler;MessageChain
+xalan;org.apache.xml.serializer.AttributesImplSerializer;MessageChain
+xalan;org.apache.xml.serializer.AttributesImplSerializer;MessageChain
+xalan;org.apache.xml.serializer.AttributesImplSerializer;MessageChain

@@ -1,0 +1,12 @@
+xalan;org.apache.xalan.templates.AVT;ShotgunSurgery
+xalan;org.apache.xalan.xslt.ObjectFactory;ShotgunSurgery
+xalan;org.apache.xalan.xsltc.compiler.Parser;ShotgunSurgery
+xalan;org.apache.xalan.transformer.TransformerImpl;ShotgunSurgery
+xalan;org.apache.xpath.compiler.Compiler;ShotgunSurgery
+xalan;org.apache.xpath.axes.NodeSequence;ShotgunSurgery
+xalan;org.apache.xpath.XPath;ShotgunSurgery
+xalan;org.apache.xml.dtm.ref.DTMStringPool;ShotgunSurgery
+xalan;org.apache.xml.serializer.SerializerFactory;ShotgunSurgery
+xalan;org.apache.xml.serializer.OutputPropertiesFactory;ShotgunSurgery
+xalan;org.apache.xml.utils.FastStringBuffer;ShotgunSurgery
+xalan;org.apache.xml.utils.XML11Char;ShotgunSurgery

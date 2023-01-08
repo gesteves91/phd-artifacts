@@ -1,0 +1,10 @@
+poi;org.apache.poi.hwpf.converter.AbstractWordConverter;BrainMethod
+poi;org.apache.poi.ss.util.TestPropertyTemplate;BrainMethod
+poi;org.apache.poi.ss.util.TestPropertyTemplate;BrainMethod
+poi;org.apache.poi.ss.usermodel.DataFormatter;BrainMethod
+poi;org.apache.poi.ss.formula.FormulaParser;BrainMethod
+poi;org.apache.poi.ss.formula.WorkbookEvaluator;BrainMethod
+poi;org.apache.poi.hssf.usermodel.HSSFChart;BrainMethod
+poi;org.apache.poi.hssf.model.InternalSheet;BrainMethod
+poi;org.apache.poi.hssf.extractor.ExcelExtractor;BrainMethod
+poi;org.apache.poi.xwpf.usermodel.XWPFDocument;BrainMethod

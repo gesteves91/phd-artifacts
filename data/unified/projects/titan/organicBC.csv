@@ -1,0 +1,2 @@
+titan;com.thinkaurelius.titan.diskstorage.solr.SolrIndex;BrainClass
+titan;com.thinkaurelius.titan.diskstorage.es.ElasticSearchIndex;BrainClass

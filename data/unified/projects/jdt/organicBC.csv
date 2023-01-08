@@ -1,0 +1,3 @@
+jdt;org.eclipse.jdt.internal.compiler.batch.Main;BrainClass
+jdt;org.eclipse.jdt.internal.codeassist.complete.CompletionParser;BrainClass
+jdt;org.eclipse.jdt.internal.codeassist.CompletionEngine;BrainClass

@@ -1,0 +1,9 @@
+broadleaf;org.broadleafcommerce.common.sandbox.domain.SandBoxType;ShotgunSurgery
+broadleaf;org.broadleafcommerce.core.workflow.SequenceProcessor;ShotgunSurgery
+broadleaf;org.broadleafcommerce.core.web.api.wrapper.OrderWrapper;ShotgunSurgery
+broadleaf;org.broadleafcommerce.openadmin.server.service.persistence.module.BasicPersistenceModule;ShotgunSurgery
+broadleaf;org.broadleafcommerce.openadmin.server.service.persistence.module.FieldManager;ShotgunSurgery
+broadleaf;org.broadleafcommerce.openadmin.server.service.persistence.module.FieldManager;ShotgunSurgery
+broadleaf;org.broadleafcommerce.openadmin.server.service.persistence.module.FieldManager;ShotgunSurgery
+broadleaf;org.broadleafcommerce.openadmin.server.domain.SandBoxItemType;ShotgunSurgery
+broadleaf;org.broadleafcommerce.openadmin.dto.Entity;ShotgunSurgery

@@ -1,0 +1,14 @@
+jdt;org.eclipse.jdt.core.tests.compiler.regression.CompilerInvocationTests;BrainMethod
+jdt;org.eclipse.jdt.internal.compiler.ClassFile;BrainMethod
+jdt;org.eclipse.jdt.internal.compiler.parser.Scanner;BrainMethod
+jdt;org.eclipse.jdt.internal.compiler.batch.Main;BrainMethod
+jdt;org.eclipse.jdt.internal.compiler.batch.Main;BrainMethod
+jdt;org.eclipse.jdt.internal.compiler.batch.Main;BrainMethod
+jdt;org.eclipse.jdt.internal.core.builder.NameEnvironment;BrainMethod
+jdt;org.eclipse.jdt.core.dom.ASTConverter;BrainMethod
+jdt;org.eclipse.jdt.internal.codeassist.complete.CompletionParser;BrainMethod
+jdt;org.eclipse.jdt.internal.codeassist.complete.CompletionParser;BrainMethod
+jdt;org.eclipse.jdt.internal.codeassist.complete.CompletionScanner;BrainMethod
+jdt;org.eclipse.jdt.internal.codeassist.CompletionEngine;BrainMethod
+jdt;org.eclipse.jdt.internal.codeassist.CompletionEngine;BrainMethod
+jdt;org.eclipse.jdt.internal.codeassist.CompletionEngine;BrainMethod

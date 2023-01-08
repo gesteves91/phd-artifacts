@@ -1,0 +1,11 @@
+ant;org.apache.tools.ant.taskdefs.optional.vss.MSVSSTest;ShotgunSurgery
+ant;org.apache.tools.ant.util.FileUtils;ShotgunSurgery
+ant;org.apache.tools.ant.util.FileUtils;ShotgunSurgery
+ant;org.apache.tools.ant.util.DOMElementWriter;ShotgunSurgery
+ant;org.apache.tools.ant.types.AbstractFileSet;ShotgunSurgery
+ant;org.apache.tools.ant.types.Mapper;ShotgunSurgery
+ant;org.apache.tools.ant.types.Mapper;ShotgunSurgery
+ant;org.apache.tools.ant.taskdefs.Execute;ShotgunSurgery
+ant;org.apache.tools.ant.taskdefs.optional.perforce.P4Base;ShotgunSurgery
+ant;org.apache.tools.ant.taskdefs.optional.junit.JUnitVersionHelper;ShotgunSurgery
+ant;org.apache.tools.ant.DirectoryScanner;ShotgunSurgery

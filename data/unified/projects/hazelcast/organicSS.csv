@@ -1,0 +1,6 @@
+hazelcast;com.hazelcast.util.ExceptionUtil;ShotgunSurgery
+hazelcast;com.hazelcast.util.ExceptionUtil;ShotgunSurgery
+hazelcast;com.hazelcast.query.Parser;ShotgunSurgery
+hazelcast;com.hazelcast.nio.serialization.SerializationServiceBuilder;ShotgunSurgery
+hazelcast;com.hazelcast.map.proxy.MapProxySupport;ShotgunSurgery
+hazelcast;com.hazelcast.instance.Node;ShotgunSurgery

@@ -1,0 +1,17 @@
+neo4j;org.neo4j.test.TargetDirectory;ShotgunSurgery
+neo4j;org.neo4j.kernel.impl.util.FileUtils;ShotgunSurgery
+neo4j;org.neo4j.kernel.impl.nioneo.store.CommonAbstractStore;ShotgunSurgery
+neo4j;org.neo4j.kernel.impl.nioneo.store.AbstractDynamicStore;ShotgunSurgery
+neo4j;org.neo4j.kernel.impl.nioneo.store.PropertyStore;ShotgunSurgery
+neo4j;org.neo4j.kernel.impl.persistence.PersistenceManager;ShotgunSurgery
+neo4j;org.neo4j.kernel.impl.transaction.xaframework.XaLogicalLogFiles;ShotgunSurgery
+neo4j;org.neo4j.kernel.impl.transaction.xaframework.LogExtractor;ShotgunSurgery
+neo4j;org.neo4j.server.helpers.ServerHelper;ShotgunSurgery
+neo4j;org.neo4j.server.rest.web.RestfulGraphDatabase;ShotgunSurgery
+neo4j;org.neo4j.server.rest.web.RestfulGraphDatabase;ShotgunSurgery
+neo4j;org.neo4j.shell.util.json.JSONObject;ShotgunSurgery
+neo4j;org.neo4j.kernel.ha.HighlyAvailableGraphDatabase;ShotgunSurgery
+neo4j;org.neo4j.kernel.ha.cluster.zoo.ZooClient;ShotgunSurgery
+neo4j;org.neo4j.backup.BackupTool;ShotgunSurgery
+neo4j;org.neo4j.consistency.checking.full.OwnerCheck;ShotgunSurgery
+neo4j;org.neo4j.cluster.protocol.cluster.ClusterMockTest.ClusterTestScriptDSL;ShotgunSurgery

@@ -1,0 +1,9 @@
+hazelcast;com.hazelcast.client.cache.SimpleCacheTestFromClient;BrainMethod
+hazelcast;com.hazelcast.client.SimpleMapTestFromClient;BrainMethod
+hazelcast;com.hazelcast.client.console.ClientConsoleApp;BrainMethod
+hazelcast;com.hazelcast.map.standalone.SimpleFunctionalMapTest;BrainMethod
+hazelcast;com.hazelcast.console.ConsoleApp;BrainMethod
+hazelcast;com.hazelcast.query.impl.ReflectionHelper;BrainMethod
+hazelcast;com.hazelcast.query.SqlPredicate;BrainMethod
+hazelcast;com.hazelcast.config.XmlConfigBuilder;BrainMethod
+hazelcast;com.hazelcast.nio.UTFEncoderDecoder;BrainMethod

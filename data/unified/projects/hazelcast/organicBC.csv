@@ -1,0 +1,3 @@
+hazelcast;com.hazelcast.client.console.ClientConsoleApp;BrainClass
+hazelcast;com.hazelcast.console.ConsoleApp;BrainClass
+hazelcast;com.hazelcast.config.XmlConfigBuilder;BrainClass

@@ -1,0 +1,4 @@
+camel;org.apache.camel.maven.RunMojo;SpaghettiCode
+camel;org.apache.camel.guice.maven.RunMojo;SpaghettiCode
+camel;org.apache.camel.component.jms.JmsConfiguration;SpaghettiCode
+camel;org.apache.camel.util.jndi.JndiContext;SpaghettiCode

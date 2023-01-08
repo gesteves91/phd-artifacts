@@ -1,0 +1,6 @@
+xalan;org.apache.xalan.templates.ElemNumber;BrainClass
+xalan;org.apache.xalan.xsltc.runtime.BasisLibrary;BrainClass
+xalan;org.apache.xalan.transformer.TransformerImpl;BrainClass
+xalan;org.apache.xml.dtm.ref.dom2dtm.DOM2DTM;BrainClass
+xalan;org.apache.xml.serializer.ToStream;BrainClass
+xalan;org.apache.xml.serializer.dom3.LSSerializerImpl;BrainClass

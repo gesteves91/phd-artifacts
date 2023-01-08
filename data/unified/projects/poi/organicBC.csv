@@ -1,0 +1,7 @@
+poi;org.apache.poi.hwpf.converter.AbstractWordConverter;BrainClass
+poi;org.apache.poi.ss.usermodel.DataFormatter;BrainClass
+poi;org.apache.poi.ss.formula.FormulaParser;BrainClass
+poi;org.apache.poi.ss.formula.WorkbookEvaluator;BrainClass
+poi;org.apache.poi.hssf.usermodel.HSSFChart;BrainClass
+poi;org.apache.poi.hssf.model.InternalSheet;BrainClass
+poi;org.apache.poi.xwpf.usermodel.XWPFDocument;BrainClass

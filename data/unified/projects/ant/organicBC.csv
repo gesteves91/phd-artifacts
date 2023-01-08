@@ -1,0 +1,7 @@
+ant;org.apache.tools.ant.IntrospectionHelper;BrainClass
+ant;org.apache.tools.ant.Main;BrainClass
+ant;org.apache.tools.ant.taskdefs.Javadoc;BrainClass
+ant;org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner;BrainClass
+ant;org.apache.tools.ant.taskdefs.Zip;BrainClass
+ant;org.apache.tools.ant.DirectoryScanner;BrainClass
+ant;org.apache.tools.bzip2.CBZip2OutputStream;BrainClass

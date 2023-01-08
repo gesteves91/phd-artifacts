@@ -1,0 +1,5 @@
+jedit;org.gjt.sp.jedit.textarea.ElasticTabStopBufferListener;BrainMethod
+jedit;org.gjt.sp.jedit.browser.VFSBrowser;BrainMethod
+jedit;org.gjt.sp.jedit.jEdit;BrainMethod
+jedit;org.gjt.sp.jedit.bsh.ParserTokenManager;BrainMethod
+jedit;installer.CBZip2InputStream;BrainMethod

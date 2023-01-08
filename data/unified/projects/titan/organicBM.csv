@@ -1,0 +1,6 @@
+titan;com.thinkaurelius.titan.graphdb.TitanIndexTest;BrainMethod
+titan;com.thinkaurelius.titan.diskstorage.solr.SolrIndex;BrainMethod
+titan;com.thinkaurelius.titan.diskstorage.es.ElasticSearchIndex;BrainMethod
+titan;com.thinkaurelius.titan.diskstorage.es.ElasticSearchIndex;BrainMethod
+titan;com.thinkaurelius.titan.graphdb.database.StandardTitanGraph;BrainMethod
+titan;com.thinkaurelius.titan.graphdb.query.vertex.BasicVertexCentricQueryBuilder;BrainMethod

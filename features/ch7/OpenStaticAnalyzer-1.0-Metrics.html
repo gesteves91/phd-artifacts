@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="data:text/css,%40import%20url%28data%3Atext%2Fcss%3B%20charset%3Dutf%2D8%3Bbase64%2CQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdPcGVuIFNhbnMnOwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKICBmb250LXdlaWdodDogMzAwOwogIHNyYzogbG9jYWwoJ09wZW4gU2FucyBMaWdodCBJdGFsaWMnKSwgbG9jYWwoJ09wZW5TYW5zLUxpZ2h0SXRhbGljJyksIHVybChodHRwOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9vcGVuc2Fucy92MTUvUFJtaVhlcHRSMzZrYUMwR0VBZXR4cmZCMzF5eE96UC1jemJmNkFBS0NWby50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ09wZW4gU2Fucyc7CiAgZm9udC1zdHlsZTogaXRhbGljOwogIGZvbnQtd2VpZ2h0OiA0MDA7CiAgc3JjOiBsb2NhbCgnT3BlbiBTYW5zIEl0YWxpYycpLCBsb2NhbCgnT3BlblNhbnMtSXRhbGljJyksIHVybChodHRwOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9vcGVuc2Fucy92MTUveGpBSlhoMzhJMTV3eXBKWHh1R01CcDBFQVZ4dDBHMGJpRW50cDQzUXQ2RS50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ09wZW4gU2Fucyc7CiAgZm9udC1zdHlsZTogaXRhbGljOwogIGZvbnQtd2VpZ2h0OiA2MDA7CiAgc3JjOiBsb2NhbCgnT3BlbiBTYW5zIFNlbWlCb2xkIEl0YWxpYycpLCBsb2NhbCgnT3BlblNhbnMtU2VtaUJvbGRJdGFsaWMnKSwgdXJsKGh0dHA6Ly9mb250cy5nc3RhdGljLmNvbS9zL29wZW5zYW5zL3YxNS9QUm1pWGVwdFIzNmthQzBHRUFldHhpOGNxTEg0TUVpU0UwUk9jVS1xSE9BLnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnT3BlbiBTYW5zJzsKICBmb250LXN0eWxlOiBpdGFsaWM7CiAgZm9udC13ZWlnaHQ6IDcwMDsKICBzcmM6IGxvY2FsKCdPcGVuIFNhbnMgQm9sZCBJdGFsaWMnKSwgbG9jYWwoJ09wZW5TYW5zLUJvbGRJdGFsaWMnKSwgdXJsKGh0dHA6Ly9mb250cy5nc3RhdGljLmNvbS9zL29wZW5zYW5zL3YxNS9QUm1pWGVwdFIzNmthQzBHRUFldHhwX1Rrdm93bElPdGJSN2VQZ0ZPcEY0LnR0ZikgZm9ybWF0KCd0cnVldHlwZScpOwp9CkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAnT3BlbiBTYW5zJzsKICBmb250LXN0eWxlOiBpdGFsaWM7CiAgZm9udC13ZWlnaHQ6IDgwMDsKICBzcmM6IGxvY2FsKCdPcGVuIFNhbnMgRXh0cmFCb2xkIEl0YWxpYycpLCBsb2NhbCgnT3BlblNhbnMtRXh0cmFCb2xkSXRhbGljJyksIHVybChodHRwOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9vcGVuc2Fucy92MTUvUFJtaVhlcHRSMzZrYUMwR0VBZXR4bERNckFZdG9PaXNxcU1EVzlNX01xYy50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ09wZW4gU2Fucyc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiAzMDA7CiAgc3JjOiBsb2NhbCgnT3BlbiBTYW5zIExpZ2h0JyksIGxvY2FsKCdPcGVuU2Fucy1MaWdodCcpLCB1cmwoaHR0cDovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvb3BlbnNhbnMvdjE1L0RYSTFPUkhDcHNRbTNWcDZtWG9hVFluRjV1RmREdHRNTHZtV3VKZGhoZ3MudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdPcGVuIFNhbnMnOwogIGZvbnQtc3R5bGU6IG5vcm1hbDsKICBmb250LXdlaWdodDogNDAwOwogIHNyYzogbG9jYWwoJ09wZW4gU2FucyBSZWd1bGFyJyksIGxvY2FsKCdPcGVuU2Fucy1SZWd1bGFyJyksIHVybChodHRwOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9vcGVuc2Fucy92MTUvY0paS2VPdUJybjRrRVJ4cXRhVUgzYUNXY3luZl9jRHhYd0NMeGlpeEcxYy50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ09wZW4gU2Fucyc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiA2MDA7CiAgc3JjOiBsb2NhbCgnT3BlbiBTYW5zIFNlbWlCb2xkJyksIGxvY2FsKCdPcGVuU2Fucy1TZW1pQm9sZCcpLCB1cmwoaHR0cDovL2ZvbnRzLmdzdGF0aWMuY29tL3Mvb3BlbnNhbnMvdjE1L01UUF95U1VKSF9ibjQ4VkJHOHNOU29uRjV1RmREdHRNTHZtV3VKZGhoZ3MudHRmKSBmb3JtYXQoJ3RydWV0eXBlJyk7Cn0KQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICdPcGVuIFNhbnMnOwogIGZvbnQtc3R5bGU6IG5vcm1hbDsKICBmb250LXdlaWdodDogNzAwOwogIHNyYzogbG9jYWwoJ09wZW4gU2FucyBCb2xkJyksIGxvY2FsKCdPcGVuU2Fucy1Cb2xkJyksIHVybChodHRwOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9vcGVuc2Fucy92MTUvazNrNzAyWk9LaUxKYzNXVmp1cGx6SW5GNXVGZER0dE1Mdm1XdUpkaGhncy50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQpAZm9udC1mYWNlIHsKICBmb250LWZhbWlseTogJ09wZW4gU2Fucyc7CiAgZm9udC1zdHlsZTogbm9ybWFsOwogIGZvbnQtd2VpZ2h0OiA4MDA7CiAgc3JjOiBsb2NhbCgnT3BlbiBTYW5zIEV4dHJhQm9sZCcpLCBsb2NhbCgnT3BlblNhbnMtRXh0cmFCb2xkJyksIHVybChodHRwOi8vZm9udHMuZ3N0YXRpYy5jb20vcy9vcGVuc2Fucy92MTUvRUluYlY1RGZHSE9pTW12YjFYci1ob25GNXVGZER0dE1Mdm1XdUpkaGhncy50dGYpIGZvcm1hdCgndHJ1ZXR5cGUnKTsKfQo%3D%29%3B%0A%0A%2A%20%7B%0A%09outline%3A%20none%20%21important%3B%0A%09margin%3A%200%3B%0A%09padding%3A%200%3B%0A%09border%3A%200px%20solid%3B%0A%7D%0A%0Ahtml%20%7B%0A%09border%3A%200%3B%0A%09font%2Dfamily%3A%20open%5Fsansregular%2C%20Arial%2C%20sans%2Dserif%3B%0A%09font%2Dsize%3A%2013px%3B%0A%09color%3A%20%23666%3B%0A%09margin%3A%200%3B%0A%09padding%3A%201em%3B%0A%09background%3A%20%23e8eaec%3B%0A%7D%0A%0Abody%20%7B%0A%09background%3A%20%23f9fbfc%3B%0A%09width%3A%201180px%3B%0A%09margin%3A%20auto%3B%0A%09padding%3A%202em%3B%0A%09%2Dmoz%2Dborder%2Dradius%3A%205px%3B%0A%09%2Dwebkit%2Dborder%2Dradius%3A%205px%3B%0A%09border%2Dradius%3A%205px%3B%0A%20%20%2Dwebkit%2Dbox%2Dshadow%3A%20%203px%203px%2010px%200px%20rgba%2889%2C%2089%2C%2089%2C%200%2E34%29%3B%0A%20%20%2Dmoz%2Dbox%2Dshadow%3A%20%20%20%20%203px%203px%2010px%200px%20rgba%2889%2C%2089%2C%2089%2C%200%2E34%29%3B%0A%20%20box%2Dshadow%3A%20%20%20%20%20%20%20%20%20%203px%203px%2010px%200px%20rgba%2889%2C%2089%2C%2089%2C%200%2E34%29%3B%0A%7D%0A%0Ah1%2C%20h2%2C%20h3%2C%20h4%2C%20h5%2C%20h6%20%7B%0A%09font%2Dfamily%3A%20open%5Fsanssemibold%3B%0A%09margin%3A%20%2E5em%200%3B%0A%09padding%3A%200%3B%0A%09%2F%2Acolor%3A%20%236DAB66%3B%2A%2F%0A%7D%0A%0Ah3%20%7B%0A%20%20font%2Dsize%3A%20150%25%3B%0A%7D%0A%0Ah3%2C%20h4%2C%20h5%2C%20h6%20%7B%0A%09margin%3A%20%2E5em%200%200%200%3B%0A%7D%0A%0Ah4%2C%20h5%2C%20h6%20%7B%0A%09font%2Dfamily%3A%20%22Open%20Sans%22%3B%0A%20%20font%2Dsize%3A%20105%25%3B%0A%20%20color%3A%20%236DAB66%3B%0A%20%20border%2Dbottom%3Adotted%202px%20%2324a700%3B%0A%20%20display%3A%20inline%2Dblock%3B%0A%7D%0A%0Ah4%3Aafter%2C%20h5%3Aafter%2C%20h6%3Aafter%20%7B%0A%20%20content%3A%20%22%5CA%22%3B%0A%20%20white%2Dspace%3A%20pre%3B%0A%7D%0A%0Aa%20%7B%0A%09text%2Ddecoration%3A%20none%3B%0A%09color%3A%20%2324a700%3B%0A%7D%0A%0Ainput%2C%20select%20%7B%0A%09font%2Dfamily%3A%20open%5Fsanslight%5Fitalic%2C%20Arial%2C%20sans%2Dserif%3B%0A%09font%2Dsize%3A%2012px%3B%0A%09outline%3A%200%20none%3B%0A%09resize%3A%20none%3B%0A%09margin%3A%200%3B%0A%7D%0A%0Aul%20%7B%0A%09list%2Dstyle%2Dtype%3A%20none%3B%0A%09padding%2Dleft%3A%202em%3B%0A%7D%0A%0Ali%20%7B%0A%09vertical%2Dalign%3A%20middle%3B%0A%09line%2Dheight%3A%20150%25%3B%0A%7D%0A%0Anav%23TOC%20%7B%0A%20%20%2F%2Atext%2Dalign%3A%20center%3B%2A%2F%0A%7D%0A%0Anav%23TOC%20%3E%20ul%20%7B%0A%20%20%2F%2Adisplay%3A%20inline%2Dblock%3B%2A%2F%0A%20%20text%2Dalign%3A%20left%3B%0A%20%20font%2Dsize%3A%201%2E5em%3B%0A%7D%0A%0Anav%23TOC%20ul%20%7B%0A%20%20margin%3A%200%3B%0A%7D%0A%0Anav%23TOC%20%3E%20ul%20ul%20%7B%0A%20%20font%2Dsize%3A%2075%25%3B%0A%7D%0A%0Anav%23TOC%20%3E%20ul%20li%20a%20%7B%0A%20%20border%2Dbottom%3A%20dotted%20%236DAB66%201px%3B%0A%20%20line%2Dheight%3A%20150%25%3B%0A%7D%0A%0Anav%23TOC%20%3E%20ul%20ul%20ul%20li%20a%20%7B%0A%20%20line%2Dheight%3A%20190%25%3B%0A%7D%0A%0Anav%23TOC%20%3E%20ul%20ul%20ul%20ul%20%7B%0A%20%20font%2Dsize%3A%20100%25%3B%0A%7D%0A%0Anav%23TOC%20%3E%20ul%20ul%20ul%20ul%20li%20a%20%7B%0A%20%20line%2Dheight%3A%20110%25%3B%0A%7D%0A%0A%0A%2Ered%20%7B%0A%09color%3A%20red%3B%0A%7D%0A%0A%2Egreen%20%7B%0A%09color%3A%20green%3B%0A%7D%0A%0Atable%2Efill%20%7B%0A%09width%3A%2095%25%3B%0A%7D%0A%0A%23container%20%7B%0A%09background%3A%20%23f9fbfc%3B%0A%09width%3A%20930px%3B%0A%09margin%3A%20auto%3B%0A%09padding%3A%202em%3B%0A%09%2Dmoz%2Dborder%2Dradius%3A%205px%3B%0A%09%2Dwebkit%2Dborder%2Dradius%3A%205px%3B%0A%09border%2Dradius%3A%205px%0A%7D%0A%0Atable%20%7B%0A%09background%3A%20%23ccc%3B%0A%09margin%3A%2020px%3B%0A%09border%3A%20%23ccc%201px%20solid%3B%0A%09%2Dmoz%2Dborder%2Dradius%3A%2010px%3B%0A%09%2Dwebkit%2Dborder%2Dradius%3A%2010px%3B%0A%09border%2Dradius%3A%2010px%0A%7D%0A%0Atable%20th%20%7B%0A%09padding%3A%204px%2010px%3B%0A%20%20text%2Dalign%3A%20center%3B%0A%09vertical%2Dalign%3A%20middle%3B%0A%09%2F%2Acolor%3A%23f9fcfc%3B%2A%2F%0A%09color%3A%20%23233%3B%0A%7D%0A%0Atable%2C%20tbody%2C%20tr%2C%20td%20%7B%0A%09vertical%2Dalign%3A%20inherit%3B%0A%09text%2Dalign%3A%20inherit%3B%0A%7D%0A%0Atable%20td%20%7B%0A%09background%3A%20%23F4F4F5%3B%0A%09padding%3A%204px%2010px%204px%2010px%3B%0A%09vertical%2Dalign%3A%20inherit%3B%0A%7D%0A%0A%2Emiddle%20%7B%0A%09vertical%2Dalign%3A%20middle%3B%0A%7D%0A%0A%2Ecenter%20%7B%0A%09text%2Dalign%3A%20center%3B%0A%7D%0A%0Atd%2Ename%20%7B%0A%09text%2Dalign%3A%20left%3B%0A%7D%0A%0Atd%2Epath%20%7B%0A%09text%2Dalign%3A%20left%3B%0A%7D%0A%0Atable%20tr%2Eeven%20td%20%7B%0A%09background%3A%20%23eee%0A%7D%0A%0Atable%20a%20%7B%0A%09display%3A%20block%3B%0A%7D%0A%0Atable%20tr%3Afirst%2Dchild%20td%3Afirst%2Dchild%20%7B%0A%09%2Dmoz%2Dborder%2Dradius%2Dtopleft%3A%205px%3B%0A%09%2Dwebkit%2Dborder%2Dtop%2Dleft%2Dradius%3A%205px%3B%0A%09border%2Dtop%2Dleft%2Dradius%3A%205px%3B%0A%7D%0A%0Atable%20tr%3Afirst%2Dchild%20td%3Alast%2Dchild%20%7B%0A%09%2Dmoz%2Dborder%2Dradius%2Dtopright%3A%205px%3B%0A%09%2Dwebkit%2Dborder%2Dtop%2Dright%2Dradius%3A%205px%3B%0A%09border%2Dtop%2Dright%2Dradius%3A%205px%3B%0A%7D%0A%0Atable%20tr%3Alast%2Dchild%20td%3Afirst%2Dchild%20%7B%0A%09%2Dmoz%2Dborder%2Dradius%2Dbottomleft%3A%205px%3B%0A%09%2Dwebkit%2Dborder%2Dbottom%2Dleft%2Dradius%3A%205px%3B%0A%09border%2Dbottom%2Dleft%2Dradius%3A%205px%3B%0A%7D%0A%0Atable%20tr%3Alast%2Dchild%20td%3Alast%2Dchild%20%7B%0A%09%2Dmoz%2Dborder%2Dradius%2Dbottomright%3A%205px%3B%0A%09%2Dwebkit%2Dborder%2Dbottom%2Dright%2Dradius%3A%205px%3B%0A%09border%2Dbottom%2Dright%2Dradius%3A%205px%3B%0A%7D%0A%0Atable%2Ecollapsed%20%7B%0A%09border%2Dcollapse%3A%20collapse%0A%7D%0A%0Aul%20%7B%0A%20%20%20%20list%2Dstyle%3Adisc%20outside%3B%0A%7D%0A%0Aol%5Btype%3D1%5D%20%7B%0A%20%20%20%20list%2Dstyle%2Dtype%3Adecimal%3B%0A%7D%0A%0Aol%5Btype%3Da%5D%20%7B%0A%20%20%20%20list%2Dstyle%2Dtype%3Alower%2Dalpha%3B%0A%7D%0A%0Aol%5Btype%3DA%5D%20%7B%0A%20%20%20%20list%2Dstyle%2Dtype%3Aupper%2Dalpha%3B%0A%7D%0A%0Aol%5Btype%3DI%5D%20%7B%0A%20%20%20%20list%2Dstyle%2Dtype%3Aupper%2Droman%3B%0A%7D%0A%0Aol%5Btype%3Di%5D%20%7B%0A%20%20%20%20list%2Dstyle%2Dtype%3Alower%2Droman%3B%0A%7D%0A%0Ap%20%7B%0A%20%20margin%3A%201em%200%3B%0A%7D%0A%0Ali%20p%3Aonly%2Dof%2Dtype%20%7B%0A%20%20margin%3A%200%3B%0A%7D%0A%0Ablockquote%2Cul%2Col%2Cdl%20%7B%0A%20%20%20%20margin%3A1em%202em%3B%0A%7D%0A%0Adl%20dd%20%7B%0A%20%20%20%20margin%2Dleft%3A1em%3B%0A%7D%0A%0Acaption%20%7B%0A%20%20%20%20margin%2Dbottom%3A%2E5em%3B%0A%20%20%20%20text%2Dalign%3Acenter%3B%0A%7D%0A%0Afieldset%2Cpre%20%7B%0A%20%20%20%20margin%2Dtop%3A%2E5em%3B%0A%20%20%20%20margin%2Dbottom%3A%2E5em%3B%0A%7D%0A%0Apre%2Ccode%2Ctt%20%7B%0A%20%20%20%20font%2Dfamily%3Amonospace%3B%0A%20%20%20%20font%2Dsize%3A108%25%3B%0A%20%20%20%20line%2Dheight%3A100%25%3B%0A%7D%0A%0Adl%20%7B%0A%20%20%20%20margin%3A0%200%201%2E125em%3B%0A%7D%0A%0Adt%20%7B%0A%20%20%20%20font%2Dweight%3A700%3B%0A%20%20%20%20line%2Dheight%3A1%2E125em%3B%0A%20%20%20%20font%2Dfamily%3A%20%22Open%20Sans%22%3B%0A%7D%0A%0Add%20%7B%0A%20%20%20%20margin%2Dleft%3A1em%3B%0A%20%20%20%20line%2Dheight%3A1%2E125em%3B%0A%7D%0A%0Add%20p%20%7B%0A%20%20margin%2Dtop%3A%20%2E3em%3B%0A%7D%0A%0Apre%20%7B%0A%20%20border%3A%202px%20dotted%20%23ddd%3B%0A%20%20%2Dwebkit%2Dborder%2Dradius%3A%204px%3B%0A%20%20%2Dmoz%2Dborder%2Dradius%3A%204px%3B%0A%20%20border%2Dradius%3A%204px%3B%0A%20%20padding%3A%201%2E5em%3B%0A%7D%0A%0Ahr%20%7B%0A%20%20border%2Dtop%3A%20%23ddd%20dotted%205px%3B%0A%0A%7D%0A%0Aimg%20%7B%0A%20%20margin%2Dleft%3A%20auto%3B%0A%20%20margin%2Dright%3A%20auto%3B%0A%20%20max%2Dwidth%3A%20%20100%25%3B%0A%20%20border%2Dstyle%3A%20solid%3B%0A%20%20border%2Dwidth%3A%202px%3B%0A%7D" rel="stylesheet">
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#reference-of-source-code-metrics">Reference of source code metrics</a><ul>
+<li><a href="#cohesion-metrics">Cohesion metrics</a></li>
+<li><a href="#complexity-metrics">Complexity metrics</a></li>
+<li><a href="#coupling-metrics">Coupling metrics</a></li>
+<li><a href="#documentation-metrics">Documentation metrics</a></li>
+<li><a href="#inheritance-metrics">Inheritance metrics</a></li>
+<li><a href="#size-metrics">Size metrics</a></li>
+</ul></li>
+<li><a href="#reference-of-code-duplication-metrics">Reference of code duplication metrics</a><ul>
+<li><a href="#clone-metrics">Clone metrics</a></li>
+</ul></li>
+</ul>
+</nav>
+<h2 id="reference-of-source-code-metrics">Reference of source code metrics</h2>
+<p>Source code metrics are used to quantify different source code characteristics. OpenStaticAnalyzer computes source code metrics for the following source code element kinds: components (e.g. archives), source files, packages, class types (including classes, interfaces, enums and annotations) and methods.</p>
+<p>The calculated metrics are grouped into 6 categories, which are the following:</p>
+<ul>
+<li><p><strong>Cohesion metrics:</strong> measure to what extent the source code elements are coherent in the system.</p></li>
+<li><p><strong>Complexity metrics:</strong> measure the complexity of source code elements (typically algorithms).</p></li>
+<li><p><strong>Coupling metrics:</strong> measure the amount of interdependencies of source code elements.</p></li>
+<li><p><strong>Documentation metrics:</strong> measure the amount of comments and documentation of source code elements in the system.</p></li>
+<li><p><strong>Inheritance metrics:</strong> measure the different aspects of the inheritance hierarchy of the system.</p></li>
+<li><p><strong>Size metrics:</strong> measure the basic properties of the analyzed system in terms of different cardinalities (e.g. number of code lines, number of classes or methods).</p></li>
+</ul>
+<p>In the case of the documentation metrics all the comments found immediately before a source code element are considered as its documentation, while the comments contained inside the source code element are considered as its comments.</p>
+<p>The following table summarizes the metrics, their abbreviations and their correspondence to different source code element kinds:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Category</th>
+<th style="text-align: left;">Metric name</th>
+<th style="text-align: left;">Abbreviation</th>
+<th style="text-align: center;">Annotation</th>
+<th style="text-align: center;">Class</th>
+<th style="text-align: center;">Component</th>
+<th style="text-align: center;">Enum</th>
+<th style="text-align: center;">File</th>
+<th style="text-align: center;">Interface</th>
+<th style="text-align: center;">Method</th>
+<th style="text-align: center;">Package</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cohesion metrics</td>
+<td style="text-align: left;">Lack of Cohesion in Methods 5</td>
+<td style="text-align: left;">LCOM5</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Complexity metrics</td>
+<td style="text-align: left;">Halstead Calculated Program Length</td>
+<td style="text-align: left;">HCPL</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Halstead Difficulty</td>
+<td style="text-align: left;">HDIF</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Halstead Effort</td>
+<td style="text-align: left;">HEFF</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Halstead Number of Delivered Bugs</td>
+<td style="text-align: left;">HNDB</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Halstead Program Length</td>
+<td style="text-align: left;">HPL</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Halstead Program Vocabulary</td>
+<td style="text-align: left;">HPV</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Halstead Time Required to Program</td>
+<td style="text-align: left;">HTRP</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Halstead Volume</td>
+<td style="text-align: left;">HVOL</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Maintainability Index (Microsoft version)</td>
+<td style="text-align: left;">MIMS</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Maintainability Index (Original version)</td>
+<td style="text-align: left;">MI</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Maintainability Index (SEI version)</td>
+<td style="text-align: left;">MISEI</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Maintainability Index (OpenStaticAnalyzer ver</td>
+<td style="text-align: left;">sion) MIS</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">McCabe’s Cyclomatic Complexity</td>
+<td style="text-align: left;">McCC</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Nesting Level</td>
+<td style="text-align: left;">NL</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Nesting Level Else-If</td>
+<td style="text-align: left;">NLE</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Weighted Methods per Class</td>
+<td style="text-align: left;">WMC</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Coupling metrics</td>
+<td style="text-align: left;">Coupling Between Object classes</td>
+<td style="text-align: left;">CBO</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Coupling Between Object classes Inverse</td>
+<td style="text-align: left;">CBOI</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Incoming Invocations</td>
+<td style="text-align: left;">NII</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Outgoing Invocations</td>
+<td style="text-align: left;">NOI</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Response set For Class</td>
+<td style="text-align: left;">RFC</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Documentation metrics</td>
+<td style="text-align: left;">API Documentation</td>
+<td style="text-align: left;">AD</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Comment Density</td>
+<td style="text-align: left;">CD</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Comment Lines of Code</td>
+<td style="text-align: left;">CLOC</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Documentation Lines of Code</td>
+<td style="text-align: left;">DLOC</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Public Documented API</td>
+<td style="text-align: left;">PDA</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Public Undocumented API</td>
+<td style="text-align: left;">PUA</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total API Documentation</td>
+<td style="text-align: left;">TAD</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Comment Density</td>
+<td style="text-align: left;">TCD</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Comment Lines of Code</td>
+<td style="text-align: left;">TCLOC</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Public Documented API</td>
+<td style="text-align: left;">TPDA</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Public Undocumented API</td>
+<td style="text-align: left;">TPUA</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Inheritance metrics</td>
+<td style="text-align: left;">Depth of Inheritance Tree</td>
+<td style="text-align: left;">DIT</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Ancestors</td>
+<td style="text-align: left;">NOA</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Children</td>
+<td style="text-align: left;">NOC</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Descendants</td>
+<td style="text-align: left;">NOD</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Parents</td>
+<td style="text-align: left;">NOP</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Size metrics</td>
+<td style="text-align: left;">Lines of Code</td>
+<td style="text-align: left;">LOC</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Logical Lines of Code</td>
+<td style="text-align: left;">LLOC</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Attributes</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Classes</td>
+<td style="text-align: left;">NCL</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Enums</td>
+<td style="text-align: left;">NEN</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Getters</td>
+<td style="text-align: left;">NG</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Interfaces</td>
+<td style="text-align: left;">NIN</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Local Attributes</td>
+<td style="text-align: left;">NLA</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Local Getters</td>
+<td style="text-align: left;">NLG</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Local Methods</td>
+<td style="text-align: left;">NLM</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Local Public Attributes</td>
+<td style="text-align: left;">NLPA</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Local Public Methods</td>
+<td style="text-align: left;">NLPM</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Local Setters</td>
+<td style="text-align: left;">NLS</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Methods</td>
+<td style="text-align: left;">NM</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Packages</td>
+<td style="text-align: left;">NPKG</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Parameters</td>
+<td style="text-align: left;">NUMPAR</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Public Attributes</td>
+<td style="text-align: left;">NPA</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Public Methods</td>
+<td style="text-align: left;">NPM</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Setters</td>
+<td style="text-align: left;">NS</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Number of Statements</td>
+<td style="text-align: left;">NOS</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Lines of Code</td>
+<td style="text-align: left;">TLOC</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Logical Lines of Code</td>
+<td style="text-align: left;">TLLOC</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Attributes</td>
+<td style="text-align: left;">TNA</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Classes</td>
+<td style="text-align: left;">TNCL</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Directories</td>
+<td style="text-align: left;">TNDI</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Enums</td>
+<td style="text-align: left;">TNEN</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Files</td>
+<td style="text-align: left;">TNFI</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Getters</td>
+<td style="text-align: left;">TNG</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Interfaces</td>
+<td style="text-align: left;">TNIN</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Local Attributes</td>
+<td style="text-align: left;">TNLA</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Local Getters</td>
+<td style="text-align: left;">TNLG</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Local Methods</td>
+<td style="text-align: left;">TNLM</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Local Public Attributes</td>
+<td style="text-align: left;">TNLPA</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Local Public Methods</td>
+<td style="text-align: left;">TNLPM</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Local Setters</td>
+<td style="text-align: left;">TNLS</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Methods</td>
+<td style="text-align: left;">TNM</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Packages</td>
+<td style="text-align: left;">TNPKG</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Public Attributes</td>
+<td style="text-align: left;">TNPA</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Public Classes</td>
+<td style="text-align: left;">TNPCL</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Public Enums</td>
+<td style="text-align: left;">TNPEN</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Public Interfaces</td>
+<td style="text-align: left;">TNPIN</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Public Methods</td>
+<td style="text-align: left;">TNPM</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Setters</td>
+<td style="text-align: left;">TNS</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Total Number of Statements</td>
+<td style="text-align: left;">TNOS</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cohesion-metrics">Cohesion metrics</h3>
+<h4 id="LCOM5">Lack of Cohesion in Methods 5 (LCOM5)</h4>
+<p><strong>Class:</strong> number of functionalities of the class. One of the basic principles of object-oriented programming is encapsulation, meaning that attributes belonging together and the operations that use them should be organized into one class, and one class shall implement only one functionality, i.e. its attributes and methods should be coherent. This metric measures the lack of cohesion and computes into how many coherent classes the class could be split. It is calculated by taking a non-directed graph, where the nodes are the implemented local methods of the class and there is an edge between the two nodes if and only if a common (local or inherited) attribute or abstract method is used or a method invokes another. The value of the metric is the number of connected components in the graph not counting those, which contain only constructors, destructors, getters, or setters.</p>
+<h3 id="complexity-metrics">Complexity metrics</h3>
+<h4 id="HCPL">Halstead Calculated Program Length (HCPL)</h4>
+<p><strong>Method:</strong></p>
+<ul>
+<li><em>n1</em>: number of distinct operators (semantic meanings of the reserved keywords, semicolons, blocks, and identifiers except in their declarations)</li>
+<li><em>n2</em>: number of distinct operands (literals - e.g. character, string, and integer literals, - and the identifiers in their declarations)</li>
+</ul>
+<p>The calculated program length is <em>n1 * log<sub>2</sub>(n1) + n2 * log<sub>2</sub>(n2)</em>.</p>
+<h4 id="HDIF">Halstead Difficulty (HDIF)</h4>
+<p><strong>Method:</strong></p>
+<ul>
+<li><em>n1</em>: number of distinct operators (semantic meanings of the reserved keywords, semicolons, blocks, and identifiers except in their declarations)</li>
+<li><em>n2</em>: number of distinct operands (literals - e.g. character, string, and integer literals, - and the identifiers in their declarations)</li>
+<li><em>N2</em>: total number of operands</li>
+</ul>
+<p>The Halstead difficulty is <em>n1/2 * N2/n2</em>.</p>
+<h4 id="HEFF">Halstead Effort (HEFF)</h4>
+<p><strong>Method:</strong></p>
+<ul>
+<li><em>n1</em>: number of distinct operators (semantic meanings of the reserved keywords, semicolons, blocks, and identifiers except in their declarations)</li>
+<li><em>n2</em>: number of distinct operands (literals - e.g. character, string, and integer literals, - and the identifiers in their declarations)</li>
+<li><em>N1</em>: total number of operators</li>
+<li><em>N2</em>: total number of operands</li>
+<li><em>n : n1 + n2</em> (program vocabulary)</li>
+<li><em>N : N1 + N2</em> (program length)</li>
+<li><em>V : N * log<sub>2</sub>(n)</em> (volume)</li>
+<li><em>D : n1/2 * N2/n2</em> (difficulty)</li>
+</ul>
+<p>The Halstead effort is <em>D * V</em>.</p>
+<h4 id="HNDB">Halstead Number of Delivered Bugs (HNDB)</h4>
+<p><strong>Method:</strong></p>
+<ul>
+<li><em>n1</em>: number of distinct operators (semantic meanings of the reserved keywords, semicolons, blocks, and identifiers except in their declarations)</li>
+<li><em>n2</em>: number of distinct operands (literals - e.g. character, string, and integer literals, - and the identifiers in their declarations)</li>
+<li><em>N1</em>: total number of operators</li>
+<li><em>N2</em>: total number of operands</li>
+<li><em>n : n1 + n2</em> (program vocabulary)</li>
+<li><em>N : N1 + N2</em> (program length)</li>
+<li><em>V : N * log<sub>2</sub>(n)</em> (volume)</li>
+<li><em>D : n1/2 * N2/n2</em> (difficulty)</li>
+<li><em>E : D * V</em> (effort)</li>
+</ul>
+<p>Number of delivered bugs is <em>E<sup>2/3</sup>/3000</em>.</p>
+<h4 id="HPL">Halstead Program Length (HPL)</h4>
+<p><strong>Method:</strong></p>
+<ul>
+<li><em>N1</em>: total number of operators (semantic meanings of the reserved keywords, semicolons, blocks, and identifiers except in their declarations)</li>
+<li><em>N2</em>: total number of operands (literals - e.g. character, string, and integer literals, - and the identifiers in their declarations)</li>
+</ul>
+<p>Halstead program length is <em>N1 + N2</em>.</p>
+<h4 id="HPV">Halstead Program Vocabulary (HPV)</h4>
+<p><strong>Method:</strong></p>
+<ul>
+<li><em>n1</em>: number of distinct operators (semantic meanings of the reserved keywords, semicolons, blocks, and identifiers except in their declarations)</li>
+<li><em>n2</em>: number of distinct operands (literals - e.g. character, string, and integer literals, - and the identifiers in their declarations)</li>
+</ul>
+<p>Halstead program vocabulary is <em>n1 + n2</em>.</p>
+<h4 id="HTRP">Halstead Time Required to Program (HTRP)</h4>
+<p><strong>Method:</strong></p>
+<ul>
+<li><em>n1</em>: number of distinct operators (semantic meanings of the reserved keywords, semicolons, blocks, and identifiers except in their declarations)</li>
+<li><em>n2</em>: number of distinct operands (literals - e.g. character, string, and integer literals, - and the identifiers in their declarations)</li>
+<li><em>N1</em>: total number of operators</li>
+<li><em>N2</em>: total number of operands</li>
+<li><em>n : n1 + n2</em> (program vocabulary)</li>
+<li><em>N : N1 + N2</em> (program length)</li>
+<li><em>V : N * log<sub>2</sub>(n)</em> (volume)</li>
+<li><em>D : n1/2 * N2/n2</em> (difficulty)</li>
+<li><em>E : D * V</em> (effort)</li>
+</ul>
+<p>Halstead time required to program is <em>E/18</em> seconds.</p>
+<h4 id="HVOL">Halstead Volume (HVOL)</h4>
+<p><strong>Method:</strong></p>
+<ul>
+<li><em>n1</em>: number of distinct operators (semantic meanings of the reserved keywords, semicolons, blocks, and identifiers except in their declarations)</li>
+<li><em>n2</em>: number of distinct operands (literals - e.g. character, string, and integer literals, - and the identifiers in their declarations)</li>
+<li><em>N1</em>: total number of operators</li>
+<li><em>N2</em>: total number of operands</li>
+<li><em>n : n1 + n2</em> (program vocabulary)</li>
+<li><em>N : N1 + N2</em> (program length)</li>
+</ul>
+<p>The Halstead volume is <em>N * log<sub>2</sub>(n)</em>.</p>
+<h4 id="MIMS">Maintainability Index (Microsoft version) (MIMS)</h4>
+<ul>
+<li><em>HVOL</em>: Halstead Volume</li>
+<li><em>McCC</em>: McCabe’s cyclomatic complexity</li>
+<li><em>LLOC</em>: logical lines of code</li>
+</ul>
+<p>The Maintainability Index used by Microsoft’s Visual Studio is computed by the following formula:</p>
+<p><em>MIMS = max(0,(171 - 5.2 * ln(HVOL) - 0.23 * (McCC) - 16.2 * ln(LLOC)) * 100 / 171)</em></p>
+<h4 id="MI">Maintainability Index (Original version) (MI)</h4>
+<ul>
+<li><em>HVOL</em>: Halstead Volume</li>
+<li><em>McCC</em>: McCabe’s cyclomatic complexity</li>
+<li><em>LLOC</em>: logical lines of code</li>
+</ul>
+<p>The original Maintainability Index is computed by the following formula:</p>
+<p><em>MI = 171 - 5.2 * ln(HVOL) - 0.23 * (McCC) - 16.2 * ln(LLOC)</em></p>
+<h4 id="MISEI">Maintainability Index (SEI version) (MISEI)</h4>
+<ul>
+<li><em>HVOL</em>: Halstead Volume</li>
+<li><em>McCC</em>: McCabe’s cyclomatic complexity</li>
+<li><em>LLOC</em>: logical lines of code</li>
+<li><em>CD</em>: comment density</li>
+</ul>
+<p>The Maintainability Index derived by the Software Engineering Institute (SEI) is computed by the following formula:</p>
+<p><em>MISEI = 171 - 5.2 * log<sub>2</sub>(HVOL) - 0.23 * McCC - 16.2 * log<sub>2</sub>(LLOC) + 50 * sin(sqrt(2.4 * CD))</em></p>
+<h4 id="MISM">Maintainability Index (OpenStaticAnalyzer version) (MISM)</h4>
+<ul>
+<li><em>HVOL</em>: Halstead Volume</li>
+<li><em>McCC</em>: McCabe’s cyclomatic complexity</li>
+<li><em>LLOC</em>: logical lines of code</li>
+<li><em>CD</em>: comment density</li>
+</ul>
+<p>The Maintainability Index proposed by OpenStaticAnalyzer combines the different scaling approach from Microsoft’s version with the inclusion of comment percentage from the Software Engineering Institute (SEI) version into the following formula:</p>
+<p><em>MISM = max(0, (171 - 5.2 * log<sub>2</sub>(HVOL) - 0.23 * McCC - 16.2 * log<sub>2</sub>(LLOC) + 50 * sin(sqrt(2.4 * CD))) * 100 / 171)</em></p>
+<h4 id="McCC">McCabe’s Cyclomatic Complexity (McCC)</h4>
+<p><strong>Method:</strong> complexity of the method expressed as the number of independent control flow paths in it. It represents a lower bound for the number of possible execution paths in the source code and at the same time it is an upper bound for the minimum number of test cases needed for achieving full branch test coverage. The value of the metric is calculated as the number of the following instructions plus 1: if, for, foreach, while, do-while, case label (which belongs to a switch instruction), catch, conditional statement (?:). Moreover, logical “and” (&amp;&amp;) and logical “or” (||) expressions also add 1 to the value because their short-circuit evaluation can cause branching depending on the first operand. The following instructions are not included: else, switch, default label (which belongs to a switch instruction), try, finally.</p>
+<p><strong>File:</strong> complexity of the file expressed as the number of independent control flow paths in it. It is calculated as the sum of the McCabe’s Cyclomatic Complexity values of the methods can be found in the file.</p>
+<h4 id="NL">Nesting Level (NL)</h4>
+<p><strong>Method:</strong> complexity of the method expressed as the depth of the maximum embeddedness of its conditional, iteration and exception handling block scopes. The following instructions are taken into account: if, else-if, else, for, while, do-while, switch, try, catch, finally and block statements that are directly inside another block statement. The following instructions do not increase the value by themselves; however, if additional embeddednesses can be found in their blocks, they are considered: case and default label (which belong to a switch instruction).</p>
+<p><strong>Class:</strong> complexity of the class expressed as the depth of the maximum embeddedness of its conditional, iteration and exception handling block scopes. It is calculated as the maximum nesting level (NL) of its local methods and init blocks.</p>
+<h4 id="NLE">Nesting Level Else-If (NLE)</h4>
+<p><strong>Method:</strong> complexity of the method expressed as the depth of the maximum embeddedness of its conditional, iteration and exception handling block scopes, where in the if-else-if construct only the first if instruction is considered. The following instructions are taken into account: if, else, for, while, do-while, switch, try, catch, finally and block statements that are directly inside another block statement. The following instructions do not increase the value by themselves; however, if additional embeddednesses can be found in their blocks, they are considered: else-if (i.e. in the if-else-if construct the use of else-if does not increase the value of the metric), case and default label (which belong to a switch instruction).</p>
+<p><strong>Class:</strong> complexity of the class expressed as the depth of the maximum embeddedness of its conditional, iteration and exception handling block scopes, where in the if-else-if construct only the first if instruction is considered. It is calculated as the maximum nesting level (NLE) of its local methods and init blocks.</p>
+<h4 id="WMC">Weighted Methods per Class (WMC)</h4>
+<p><strong>Class:</strong> complexity of the class expressed as the number of independent control flow paths in it. It is calculated as the sum of the McCabe’s Cyclomatic Complexity (McCC) values of its local methods and init blocks.</p>
+<h3 id="coupling-metrics">Coupling metrics</h3>
+<h4 id="CBO">Coupling Between Object classes (CBO)</h4>
+<p><strong>Class:</strong> number of directly used other classes (e.g. by inheritance, function call, type reference, attribute reference). Classes using many other classes highly depend on their environment, so it is difficult to test or reuse them; furthermore, they are very sensitive to the changes in the system.</p>
+<h4 id="CBOI">Coupling Between Object classes Inverse (CBOI)</h4>
+<p><strong>Class:</strong> number of other classes, which directly use the class. Classes which are used by many other classes have a high impact on the behavior of the system, and should be modified very carefully and tested intensively.</p>
+<h4 id="NII">Number of Incoming Invocations (NII)</h4>
+<p><strong>Method:</strong> number of other methods and attribute initializations which directly call the method. If the method is invoked several times from the same method or attribute initialization, it is counted only once.</p>
+<p><strong>Class:</strong> number of other methods and attribute initializations which directly call the local methods of the class. If a method is invoked several times from the same method or attribute initialization, it is counted only once.</p>
+<h4 id="NOI">Number of Outgoing Invocations (NOI)</h4>
+<p><strong>Method:</strong> number of directly called methods. If a method is invoked several times, it is counted only once.</p>
+<p><strong>Class:</strong> number of directly called methods of other classes, including method invocations from attribute initializations. If a method is invoked several times, it is counted only once.</p>
+<h4 id="RFC">Response set For Class (RFC)</h4>
+<p><strong>Class:</strong> number of local (i.e. not inherited) methods in the class (NLM) plus the number of directly invoked other methods by its methods or attribute initializations (NOI).</p>
+<h3 id="documentation-metrics">Documentation metrics</h3>
+<h4 id="AD">API Documentation (AD)</h4>
+<p><strong>Class:</strong> ratio of the number of documented public methods in the class +1 if the class itself is documented to the number of all public methods in the class + 1 (the class itself); however, the nested, anonymous, and local classes are not included.</p>
+<p><strong>Package:</strong> ratio of the number of documented public classes and methods in the package to the number of all of its public classes and methods; however, the classes and methods of its subpackages are not included.</p>
+<h4 id="CD">Comment Density (CD)</h4>
+<p><strong>Method:</strong> ratio of the comment lines of the method (CLOC) to the sum of its comment (CLOC) and logical lines of code (LLOC).</p>
+<p><strong>Class</strong>: ratio of the comment lines of the class (CLOC) to the sum of its comment (CLOC) and logical lines of code (LLOC).</p>
+<p><strong>Package:</strong> ratio of the comment lines of the package (CLOC) to the sum of its comment (CLOC) and logical lines of code (LLOC).</p>
+<h4 id="CLOC">Comment Lines of Code (CLOC)</h4>
+<p><strong>Method</strong>: number of comment and documentation code lines of the method; however, its anonymous and local classes are not included.</p>
+<p><strong>Class:</strong> number of comment and documentation code lines of the class, including its local methods and attributes; however, its nested, anonymous, and local classes are not included.</p>
+<p><strong>File:</strong> number of comment and documentation code lines of the file.</p>
+<p><strong>Package:</strong> number of comment and documentation code lines of the package; however, its subpackages are not included.</p>
+<h4 id="DLOC">Documentation Lines of Code (DLOC)</h4>
+<p><strong>Method</strong>: number of documentation code lines of the method.</p>
+<p><strong>Class:</strong> number of documentation code lines of the class, including its local methods and attributes; however, its nested, anonymous, and local classes are not included.</p>
+<h4 id="PDA">Public Documented API (PDA)</h4>
+<p><strong>Class:</strong> number of documented public methods in the class (+1 if the class itself is documented); however, the methods of its nested, anonymous, and local classes are not counted.</p>
+<p><strong>File:</strong> number of documented public classes and methods in the file.</p>
+<p><strong>Package:</strong> number of documented public classes and methods in the package; however, the classes and methods of its subpackages are not counted.</p>
+<h4 id="PUA">Public Undocumented API (PUA)</h4>
+<p><strong>Class:</strong> number of undocumented public methods in the class (+1 if the class itself is undocumented); however, the methods of its nested, anonymous, and local classes are not counted.</p>
+<p><strong>File:</strong> number of undocumented public classes and methods in the file.</p>
+<p><strong>Package:</strong> number of undocumented public classes and methods in the package; however, the classes and methods of its subpackages are not counted.</p>
+<h4 id="TAD">Total API Documentation (TAD)</h4>
+<p><strong>Package:</strong> ratio of the number of documented public classes and methods in the package to the number of all of its public classes and methods, including its subpackages.</p>
+<p><strong>Component:</strong> ratio of the number of documented public classes and methods in the component to the number of all of its public classes and methods, including its subcomponents.</p>
+<h4 id="TCD">Total Comment Density (TCD)</h4>
+<p><strong>Method:</strong> ratio of the total comment lines of the method (TCLOC) to the sum of its total comment (TCLOC) and total logical lines of code (TLLOC).</p>
+<p><strong>Class:</strong> ratio of the total comment lines of the class (TCLOC) to the sum of its total comment (TCLOC) and total logical lines of code (TLLOC).</p>
+<p><strong>Package:</strong> ratio of the total comment lines of the package (TCLOC) to the sum of its total comment (TCLOC) and total logical lines of code (TLLOC).</p>
+<p><strong>Component:</strong> ratio of the total comment lines of the component (TCLOC) to the sum of its total comment (TCLOC) and total logical lines of code (TLLOC).</p>
+<h4 id="TCLOC">Total Comment Lines of Code (TCLOC)</h4>
+<p><strong>Method</strong>: number of comment and documentation code lines of the method, including its anonymous and local classes.</p>
+<p><strong>Class:</strong> number of comment and documentation code lines of the class, including its local methods and attributes, as well as its nested, anonymous, and local classes.</p>
+<p><strong>Package:</strong> number of comment and documentation code lines of the package, including its subpackages.</p>
+<p><strong>Component:</strong> number of comment and documentation code lines of the component, including its subcomponents.</p>
+<h4 id="TPDA">Total Public Documented API (TPDA)</h4>
+<p><strong>Package:</strong> number of documented public classes and methods in the package, including the documented public classes and methods of its subpackages.</p>
+<p><strong>Component:</strong> number of documented public classes and methods in the component, including the documented public classes and methods of its subcomponents.</p>
+<h4 id="TPUA">Total Public Undocumented API (TPUA)</h4>
+<p><strong>Package:</strong> number of undocumented public classes and methods in the package, including the undocumented public classes and methods of its subpackages.</p>
+<p><strong>Component:</strong> number of undocumented public classes and methods in the component, including the undocumented public classes and methods of its subcomponents.</p>
+<h3 id="inheritance-metrics">Inheritance metrics</h3>
+<h4 id="DIT">Depth of Inheritance Tree (DIT)</h4>
+<p><strong>Class:</strong> length of the path that leads from the class to its farthest ancestor in the inheritance tree.</p>
+<h4 id="NOA">Number of Ancestors (NOA)</h4>
+<p><strong>Class:</strong> number of classes, interfaces, enums and annotations from which the class is directly or indirectly inherited.</p>
+<h4 id="NOC">Number of Children (NOC)</h4>
+<p><strong>Class:</strong> number of classes, interfaces, enums and annotations which are directly derived from the class.</p>
+<h4 id="NOD">Number of Descendants (NOD)</h4>
+<p><strong>Class:</strong> number of classes, interfaces, enums, annotations, which are directly or indirectly derived from the class.</p>
+<h4 id="NOP">Number of Parents (NOP)</h4>
+<p><strong>Class:</strong> number of classes, interfaces, enums and annotations from which the class is directly inherited.</p>
+<h3 id="size-metrics">Size metrics</h3>
+<h4 id="LOC">Lines of Code (LOC)</h4>
+<p><strong>Method</strong>: number of code lines of the method, including empty and comment lines; however, its anonymous and local classes are not included.</p>
+<p><strong>Class:</strong> number of code lines of the class, including empty and comment lines, as well as its local methods; however, its nested, anonymous, and local classes are not included.</p>
+<p><strong>File:</strong> number of code lines of the file.</p>
+<p><strong>Package:</strong> number of code lines of the package, including empty and comment lines; however, its subpackages are not included.</p>
+<h4 id="LLOC">Logical Lines of Code (LLOC)</h4>
+<p><strong>Method:</strong> number of non-empty and non-comment code lines of the method; however, its anonymous and local classes are not included.</p>
+<p><strong>Class:</strong> number of non-empty and non-comment code lines of the class, including the non-empty and non-comment lines of its local methods; however, its nested, anonymous, and local classes are not included.</p>
+<p><strong>File:</strong> number of non-empty and non-comment code lines of the file.</p>
+<p><strong>Package:</strong> number of non-empty and non-comment code lines of the package; however, its subpackages are not included.</p>
+<h4 id="NA">Number of Attributes (NA)</h4>
+<p><strong>Class:</strong> number of attributes in the class, including the inherited ones; however, the attributes of its nested, anonymous, and local classes are not included.</p>
+<p><strong>Package:</strong> number of attributes in the package; however, attributes of its subpackages are not included.</p>
+<h4 id="NCL">Number of Classes (NCL)</h4>
+<p><strong>Package:</strong> number of classes in the package; however, the classes of its subpackages are not included.</p>
+<h4 id="NEN">Number of Enums (NEN)</h4>
+<p><strong>Package:</strong> number of enums in the package; however, the enums of its subpackages are not included.</p>
+<h4 id="NG">Number of Getters (NG)</h4>
+<p><strong>Class:</strong> number of getter methods in the class, including the inherited ones; however, the getter methods of its nested, anonymous, and local classes are not included. Methods that override abstract methods are not counted.</p>
+<p><strong>Package</strong>: number of getter methods in the package; however, getter methods of its subpackages are not included.</p>
+<h4 id="NIN">Number of Interfaces (NIN)</h4>
+<p><strong>Package:</strong> number of interfaces in the package; however, the interfaces of its subpackages are not included.</p>
+<h4 id="NLA">Number of Local Attributes (NLA)</h4>
+<p><strong>Class:</strong> number of local (i.e. not inherited) attributes in the class; however, the attributes of nested, anonymous, and local classes are not included.</p>
+<h4 id="NLG">Number of Local Getters (NLG)</h4>
+<p><strong>Class:</strong> number of local (i.e. not inherited) getter methods in the class; however, the getter methods of its nested, anonymous, and local classes are not included. Methods that override abstract methods are not counted.</p>
+<h4 id="NLM">Number of Local Methods (NLM)</h4>
+<p><strong>Class:</strong> number of local (i.e. not inherited) methods in the class; however, the methods of nested, anonymous, and local classes are not included.</p>
+<h4 id="NLPA">Number of Local Public Attributes (NLPA)</h4>
+<p><strong>Class:</strong> number of local (i.e. not inherited) public attributes in the class; however, the attributes of nested, anonymous, and local classes are not included.</p>
+<h4 id="NLPM">Number of Local Public Methods (NLPM)</h4>
+<p><strong>Class:</strong> number of local (i.e. not inherited) public methods in the class; however, the methods of nested, anonymous, and local classes are not included.</p>
+<h4 id="NLS">Number of Local Setters (NLS)</h4>
+<p><strong>Class:</strong> number of local (i.e. not inherited) setter methods in the class; however, the setter methods of its nested, anonymous, and local classes are not included. Methods that override abstract methods are not counted.</p>
+<h4 id="NM">Number of Methods (NM)</h4>
+<p><strong>Class:</strong> number of methods in the class, including the inherited ones; however, the methods of its nested, anonymous and local classes are not included. Methods that override abstract methods are not counted.</p>
+<p><strong>Package:</strong> number of methods in the package; however, methods of its subpackages are not included.</p>
+<h4 id="NPKG">Number of Packages (NPKG)</h4>
+<p><strong>Package:</strong> number of directly contained subpackages of the package.</p>
+<h4 id="NUMPAR">Number of Parameters (NUMPAR)</h4>
+<p><strong>Method</strong>: number of the parameters of the method. The varargs parameter counts as one.</p>
+<h4 id="NPA">Number of Public Attributes (NPA)</h4>
+<p><strong>Class:</strong> number of public attributes in the class, including the inherited ones; however, the public attributes of its nested, anonymous, and local classes are not included.</p>
+<p><strong>Package:</strong> number of public attributes in the package; however, the public attributes of its subpackages are not included.</p>
+<h4 id="NPM">Number of Public Methods (NPM)</h4>
+<p><strong>Class:</strong> number of public methods in the class, including the inherited ones; however, the public methods of nested, anonymous, and local classes are not included. Methods that override abstract methods are not counted.</p>
+<p><strong>Package:</strong> number of public methods in the package; however, the public methods of its subpackages are not included.</p>
+<h4 id="NS">Number of Setters (NS)</h4>
+<p><strong>Class:</strong> number of setter methods in the class, including the inherited ones; however, the setter methods of its nested, anonymous, and local classes are not included. Methods that override abstract methods are not counted.</p>
+<p><strong>Package:</strong> number of setter methods in the package; however, setter methods of its subpackages are not included.</p>
+<h4 id="NOS">Number of Statements (NOS)</h4>
+<p><strong>Method:</strong> number of statements in the method; however, the statements of its anonymous and local classes are not included.</p>
+<p><strong>Class:</strong> number of statements in the class; however, the statements of its nested, anonymous, and local classes are not included.</p>
+<h4 id="TLOC">Total Lines of Code (TLOC)</h4>
+<p><strong>Method</strong>: number of code lines of the method, including empty and comment lines, as well as its anonymous and local classes.</p>
+<p><strong>Class:</strong> number of code lines of the class, including empty and comment lines, as well as its local methods, anonymous, local, and nested classes.</p>
+<p><strong>Package:</strong> number of code lines of the package, including empty and comment lines, as well as its subpackages.</p>
+<p><strong>Component:</strong> number of code lines of the component, including empty and comment lines, as well as its subcomponents.</p>
+<h4 id="TLLOC">Total Logical Lines of Code (TLLOC)</h4>
+<p><strong>Method</strong>: number of non-empty and non-comment code lines of the method, including the non-empty and non-comment lines of its anonymous and local classes.</p>
+<p><strong>Class:</strong> number of non-empty and non-comment code lines of the class, including the non-empty and non-comment code lines of its local methods, anonymous, local, and nested classes.</p>
+<p><strong>Package:</strong> number of non-empty and non-comment code lines of the package, including its subpackages.</p>
+<p><strong>Component:</strong> number of non-empty and non-comment code lines of the component, including its subcomponents.</p>
+<h4 id="TNA">Total Number of Attributes (TNA)</h4>
+<p><strong>Class:</strong> number of attributes in the class, including the inherited ones, as well as the inherited and local attributes of its nested, anonymous and local classes.</p>
+<p><strong>Package:</strong> number of attributes in the package, including the attributes of its subpackages.</p>
+<p><strong>Component:</strong> number of attributes in the component, including the attributes of its subcomponents.</p>
+<h4 id="TNCL">Total Number of Classes (TNCL)</h4>
+<p><strong>Package:</strong> number of classes in the package, including the classes of its subpackages.</p>
+<p><strong>Component:</strong> number of classes in the component, including the classes of its subcomponents.</p>
+<h4 id="TNDI">Total Number of Directories[^7] (TNDI)</h4>
+<p><strong>Package:</strong> number of directories that belong to the package, including the directories of its subpackages.</p>
+<p><strong>Component:</strong> number of directories that belong to the component, including its subcomponents.</p>
+<h4 id="TNEN">Total Number of Enums (TNEN)</h4>
+<p><strong>Package:</strong> number of enums in the package, including the enums of its subpackages.</p>
+<p><strong>Component:</strong> number of enums in the component, including the enums of its subcomponents.</p>
+<h4 id="TNFI">Total Number of Files (TNFI)</h4>
+<p><strong>Package:</strong> number of files that belong to the package, including the files of its subpackages.</p>
+<p><strong>Component:</strong> number of files that belong to the component, including its subcomponents.</p>
+<h4 id="TNG">Total Number of Getters (TNG)</h4>
+<p><strong>Class:</strong> number of getter methods in the class, including the inherited ones, as well as the inherited and local getter methods of its nested, anonymous and local classes.</p>
+<p><strong>Package:</strong> number of getter methods in the package, including the getter methods of its subpackages.</p>
+<p><strong>Component:</strong> number of getter methods in the component, including the getter methods of its subcomponents.</p>
+<h4 id="TNIN">Total Number of Interfaces (TNIN)</h4>
+<p><strong>Package:</strong> number of interfaces in the package, including the interfaces of its subpackages.</p>
+<p><strong>Component:</strong> number of interfaces in the component, including the interfaces of its subcomponents.</p>
+<h4 id="TNLA">Total Number of Local Attributes (TNLA)</h4>
+<p><strong>Class:</strong> number of local (i.e. not inherited) attributes in the class, including the attributes of its nested, anonymous, and local classes.</p>
+<h4 id="TNLG">Total Number of Local Getters (TNLG)</h4>
+<p><strong>Class:</strong> number of local (i.e. not inherited) getter methods in the class, including the local getter methods of its nested, anonymous, and local classes.</p>
+<h4 id="TNLM">Total Number of Local Methods (TNLM)</h4>
+<p><strong>Class:</strong> number of local (i.e. not inherited) methods in the class, including the local methods of its nested, anonymous, and local classes.</p>
+<h4 id="TNLPA">Total Number of Local Public Attributes (TNLPA)</h4>
+<p><strong>Class:</strong> number of local (i.e. not inherited) public attributes in the class, including the local public attributes of its nested, anonymous, and local classes.</p>
+<h4 id="TNLPM">Total Number of Local Public Methods (TNLPM)</h4>
+<p><strong>Class:</strong> number of local (i.e. not inherited) public methods in the class, including the local methods of its nested, anonymous, and local classes.</p>
+<h4 id="TNLS">Total Number of Local Setters (TNLS)</h4>
+<p><strong>Class:</strong> number of local (i.e. not inherited) setter methods in the class, including the local setter methods of its nested, anonymous, and local classes.</p>
+<h4 id="TNM">Total Number of Methods (TNM)</h4>
+<p><strong>Class:</strong> number of methods in the class, including the inherited ones, as well as the inherited and local methods of its nested, anonymous, and local classes. Methods that override abstract methods are not counted.</p>
+<p><strong>Package:</strong> number of methods in the package, including the methods of its subpackages.</p>
+<p><strong>Component:</strong> number of methods in the component, including the methods of its subcomponents.</p>
+<h4 id="TNPKG">Total Number of Packages (TNPKG)</h4>
+<p><strong>Package:</strong> number of subpackages in the package, including all directly or indirectly contained subpackages.</p>
+<p><strong>Component:</strong> number of packages and subpackages that belong to the component, including its subcomponents.</p>
+<h4 id="TNPA">Total Number of Public Attributes (TNPA)</h4>
+<p><strong>Class:</strong> number of public attributes in the class, including the inherited ones, as well as the inherited and local public attributes of its nested, anonymous, and local classes.</p>
+<p><strong>Package:</strong> number of public attributes in the package, including the public attributes of its subpackages.</p>
+<p><strong>Component:</strong> number of public attributes in the component, including the public attributes of its subcomponents.</p>
+<h4 id="TNPCL">Total Number of Public Classes (TNPCL)</h4>
+<p><strong>Package:</strong> number of public classes in the package, including the public classes of its subpackages.</p>
+<p><strong>Component:</strong> number of public classes in the component, including the public classes of its subcomponents.</p>
+<h4 id="TNPEN">Total Number of Public Enums (TNPEN)</h4>
+<p><strong>Package:</strong> number of public enums in the package, including the public enums of its subpackages.</p>
+<p><strong>Component:</strong> number of public enums in the component, including the public enums of its subcomponents.</p>
+<h4 id="TNPIN">Total Number of Public Interfaces (TNPIN)</h4>
+<p><strong>Package:</strong> number of public interfaces in the package, including the public interfaces of its subpackages.</p>
+<p><strong>Component:</strong> number of public interfaces in the component, including the public interfaces of its subcomponents.</p>
+<h4 id="TNPM">Total Number of Public Methods (TNPM)</h4>
+<p><strong>Class:</strong> number of public methods in the class, including the inherited ones, as well as the inherited and local public methods of its nested, anonymous, and local classes.</p>
+<p><strong>Package:</strong> number of public methods in the package, including the public methods of its subpackages.</p>
+<p><strong>Component:</strong> number of public methods in the component, including the public methods of its subcomponents.</p>
+<h4 id="TNS">Total Number of Setters (TNS)</h4>
+<p><strong>Class:</strong> number of setter methods in the class, including the inherited ones, as well as the inherited and local setter methods of its nested, anonymous and local classes.</p>
+<p><strong>Package:</strong> number of setter methods in the package, including the setter methods of its subpackages.</p>
+<p><strong>Component:</strong> number of setter methods in the component, including the setter methods of its subcomponents.</p>
+<h4 id="TNOS">Total Number of Statements (TNOS)</h4>
+<p><strong>Method:</strong> number of statements in the method, including the statements of its anonymous and local classes.</p>
+<p><strong>Class:</strong> number of statements in the class, including the statements of its nested, anonymous, and local classes.</p>
+<p><strong>Package:</strong> number of statements in the package, including the statements of its subpackages.</p>
+<p><strong>Component:</strong> number of statements in the component, including the statements of its subcomponents.</p>
+<h2 id="reference-of-code-duplication-metrics">Reference of code duplication metrics</h2>
+<p>Code cloning (or copy-paste programming) means the copying of an existing piece of source code, pasting it somewhere else, and typically performing smaller modifications on it. Based on the level of similarity between the copied code fragments we can define the following duplication types:</p>
+<ul>
+<li><p><strong>Type-1</strong>: the copied code parts are identical code fragments except for variations in whitespace, layout and comments.</p></li>
+<li><p><strong>Type-2</strong>: syntactically identical fragments except for variations in identifier names, literals, type references, whitespace, layout and comments.</p></li>
+<li><p><strong>Type-3</strong>: copied fragments with further modifications such as altered, added, or removed statements, in addition to variations in identifier names, literals, type references, whitespace, layout and comments.</p></li>
+<li><p><strong>Type-4</strong>: the copied code fragments are syntactically different, but they perform the same functionality, i.e. they are semantically the same.</p></li>
+</ul>
+<p>OpenStaticAnalyzer is capable of identifying Type-2 clones, i.e. code fragments that are structurally identical, but may differ in variable names, literals, identifiers, etc.</p>
+<p>Two code segments correspond to each other if they are copies of each other. This relation is an equivalence relation and we use the notion of clone classes to the classes of the relation, and the members of the classes will be referred to as clone instances. Owing to the nature of the relation, each clone class must contain at least two clone instances.</p>
+<p>Clones are tracked during the source code analysis of consecutive revisions of the analyzed software system. OpenStaticAnalyzer detects suspicious, inconsistently changing code copies, which are called “clone smells”. The smells concerning clone classes are the following:</p>
+<ul>
+<li><p><strong>Disappearing Clone Class (DCC):</strong> The clone class existed in the previously analyzed revision but it does not exist anymore.</p></li>
+<li><p><strong>Appearing Clone Class (ACC):</strong> The clone class did not exist in the previously analyzed revision.</p></li>
+</ul>
+<p>The smells concerning clone instances are issued only if the containing clone class does not contain any smell. These are the following:</p>
+<ul>
+<li><p><strong>Disappearing Clone Instance (DCI):</strong> The clone instance existed in the previously analyzed revision but it does not exist anymore.</p></li>
+<li><p><strong>Appearing Clone Instance (ACI):</strong> The clone instance did not exist in the previously analyzed revision.</p></li>
+<li><p><strong>Moving Clone Instance (MCI):</strong> The clone instance belonged to a different clone class in the previously analyzed revision than its current class.</p></li>
+</ul>
+<p>The following table summarizes the code duplication metrics, their abbreviations, and their correspondence to different source code element types.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Metric name</th>
+<th style="text-align: left;">Abbrev.</th>
+<th style="text-align: center;">Clone Instance</th>
+<th style="text-align: center;">Clone Class</th>
+<th style="text-align: center;">Method</th>
+<th style="text-align: center;">Class</th>
+<th style="text-align: center;">Interface</th>
+<th style="text-align: center;">Enum</th>
+<th style="text-align: center;">Package</th>
+<th style="text-align: center;">Comp.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Clone Age</td>
+<td style="text-align: left;">CA</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Clone Classes</td>
+<td style="text-align: left;">CCL</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Clone Complexity</td>
+<td style="text-align: left;">CCO</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Clone Coverage</td>
+<td style="text-align: left;">CC</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Clone Embeddedness</td>
+<td style="text-align: left;">CE</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Clone Instances</td>
+<td style="text-align: left;">CI</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Clone Line Coverage</td>
+<td style="text-align: left;">CLC</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Clone Lines of Code</td>
+<td style="text-align: left;">CLLOC</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Clone Logical Line Coverage</td>
+<td style="text-align: left;">CLLC</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Clone Variability</td>
+<td style="text-align: left;">CV</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lines of Duplicated Code</td>
+<td style="text-align: left;">LDC</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Logical Lines of Duplicated Code</td>
+<td style="text-align: left;">LLDC</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Normalized Clone Radius</td>
+<td style="text-align: left;">NCR</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+</tbody>
+</table>
+<h3 id="clone-metrics">Clone metrics</h3>
+<h4 id="CA">Clone Age (CA)</h4>
+<p><strong>Clone class/clone instance:</strong> number of previously analyzed revisions in which the clone class/clone instance was present + 1.</p>
+<h4 id="CCL">Clone Classes (CCL)</h4>
+<p><strong>Method/class/package:</strong> number of clone classes having at least one clone instance in the source code element.</p>
+<p><strong>Component:</strong> number of clone classes having at least one clone instance in the component.</p>
+<h4 id="CCO">Clone Complexity (CCO)</h4>
+<p><strong>Clone instance:</strong> the McCabe complexity of the code fragment corresponding to the clone instance.</p>
+<p><strong>Clone class:</strong> sum of CCO of clone instances in the clone class.</p>
+<p><strong>Method/class/package:</strong> sum of CCO of clone instances in the source code element.</p>
+<p><strong>Component:</strong> sum of CCO of clone instances in the component.</p>
+<h4 id="CC">Clone Coverage (CC)</h4>
+<p><strong>Method/class/package:</strong> ratio of code covered by code duplications in the source code element to the size of the source code element, expressed in terms of the number of syntactic entities (statements, expressions, etc.).</p>
+<p><strong>Component:</strong> ratio of code covered by code duplications in the component to the size of the component, expressed in terms of the number of syntactic entities (statements, expressions, etc.).</p>
+<h4 id="CE">Clone Embeddedness (CE)</h4>
+<p><strong>Clone instance:</strong> sum of incoming and outgoing references (function calls, variable references, type references; different references to the same entity are counted only once) in the code fragment corresponding to the clone instance, weighted with the number of directory changes between the referenced code fragments.</p>
+<p><strong>Clone class:</strong> sum of CE of the clone instances of the clone class + 1.</p>
+<h4 id="CI">Clone Instances (CI)</h4>
+<p><strong>Method/class/package:</strong> number of clone instances in the source code element.</p>
+<p><strong>Component:</strong> number of clone instances in the component.</p>
+<p><strong>Clone class:</strong> number of clone instances in the clone class.</p>
+<h4 id="CLC">Clone Line Coverage (CLC)</h4>
+<p><strong>Method/class/package:</strong> ratio of code covered by code duplications in the source code element to the size of the source code element, expressed in terms of lines of code.</p>
+<p><strong>Component:</strong> ratio of code covered by code duplications in the component to the size of the component, expressed in terms of lines of code.</p>
+<h4 id="CLLOC">Clone Lines of Code (CLLOC)</h4>
+<p><strong>Clone instance:</strong> length of the clone instance expressed in terms of lines of code.</p>
+<p><strong>Clone class:</strong> average of CLLOC of clone instances belonging to the clone class.</p>
+<h4 id="CLLC">Clone Logical Line Coverage (CLLC)</h4>
+<p><strong>Method/class/package:</strong> ratio of code covered by code duplications in the source code element to the size of source code element, expressed in terms of logical lines of code (non-empty, non-comment lines).</p>
+<p><strong>Component:</strong> ratio of code covered by code duplications in the component to the size of the component, expressed in terms of logical lines of code (non-empty, non-comment lines).</p>
+<h4 id="CV">Clone Variability (CV)</h4>
+<p><strong>Clone instance:</strong> instability of the clone instance since it appeared. It is computed as the ratio of the number of previously analyzed revisions when the instance had been changed to its age (CA).</p>
+<p><strong>Clone class:</strong> instability of the clone class since it appeared. It is computed as the ratio of the number of previously analyzed revisions when its contained instances were moved, deleted, or added, to its age (CA), plus the average CV of its clone instances.</p>
+<h4 id="LDC">Lines of Duplicated Code (LDC)</h4>
+<p><strong>Method/class/package:</strong> number of code lines covered by code duplications in the source code element.</p>
+<p><strong>Component:</strong> number of code lines covered by code duplications in the component.</p>
+<h4 id="LLDC">Logical Lines of Duplicated Code (LLDC)</h4>
+<p><strong>Method/class/package:</strong> number of logical code lines (non-empty, non-comment lines) covered by code duplications in the source code element.</p>
+<p><strong>Component:</strong> The number of logical code lines (non-empty, non-comment lines) covered by code duplications in the component.</p>
+<h4 id="NCR">Normalized Clone Radius (NCR)</h4>
+<p><strong>Clone class:</strong> normalized average distance among clone instances belonging to the clone class, expressed in terms of number of directory changes.</p>
+<p><strong>Component:</strong> average of NCR of the clone classes in the component.</p>
+</body>
+</html>

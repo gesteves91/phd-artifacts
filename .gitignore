@@ -29,5 +29,8 @@ ipython_config.py
 # Logs
 .logs
 
+# Python from pyenv
+.python-version
+
 # Local env files
 .venv

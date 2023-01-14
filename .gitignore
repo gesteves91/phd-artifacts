@@ -27,7 +27,7 @@ ipython_config.py
 .ionide
 
 # Logs
-.logs
+*/logs.log
 
 # Python from pyenv
 .python-version

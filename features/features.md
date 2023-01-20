@@ -1,8 +1,10 @@
 # Complete List of Features
 
-## Class-Level Metrics (60 static metrics - 55/60 Kept)
+## Unified Dataset
 
-### Clone Metrics
+### Class-Level Metrics (60 static metrics - 55/60 Kept)
+
+#### Clone Metrics
 
 | Acronym | Feature                                  | Status |
 | ------- | ---------------------------------------- | ------ |
@@ -15,13 +17,13 @@
 | LDC     | Lines of Duplicated Code                 | Kept   |
 | LLDC    | Logical Lines of Duplicated Code         | Gone   |
 
-### Cohesion
+#### Cohesion
 
 | Acronym | Feature                                  | Status |
 | ------- | ---------------------------------------- | ------ |
 | LCOM5   | Lack of Cohesion in Methods 5            | Kept   |
 
-### Complexity
+#### Complexity
 
 | Acronym | Feature                                  | Status |
 | ------- | ---------------------------------------- | ------ |
@@ -29,7 +31,7 @@
 | NLE     | Nesting Level Else-If                    | Kept   |
 | WMC     | Weighted Methods per Class               | Kept   |
 
-### Coupling
+#### Coupling
 
 | Acronym | Feature                                  | Status |
 | ------- | ---------------------------------------- | ------ |
@@ -39,7 +41,7 @@
 | NOI     | Number of Outgoing Invocations           | Kept   |
 | RFC     | Response for a Class                     | Kept   |
 
-### Documentation
+#### Documentation
 
 | Acronym | Feature                                  | Status |
 | ------- | ---------------------------------------- | ------ |
@@ -52,7 +54,7 @@
 | TCD     | Total Comment Density                    | Kept   |
 | TCLOC   | Total Comment Lines of Code              | Gone   |
 
-### Inheritance
+#### Inheritance
 
 | Acronym | Feature                                  | Status |
 | ------- | ---------------------------------------- | ------ |
@@ -62,7 +64,7 @@
 | NOD     | Number of Descendants                    | Kept   |
 | NOP     | Number of Parents                        | Kept   |
 
-### Size
+#### Size
 
 | Acronym | Feature                                  | Status |
 | ------- | ---------------------------------------- | ------ |
@@ -97,7 +99,7 @@
 | TNLPA   | Total Number of Local Public Attributes  | Gone   |
 | TNPA    | Total Number of Public Attributes        | Gone   |
 
-## Removed due to high correlation (over 99%)
+### Removed due to high correlation (over 99%)
 
 | Feature | Correlated Feature |
 |---------|--------------------|
@@ -106,3 +108,6 @@
 | TNA     | TNPA               |
 | TNLPA   | NLPA               |
 | TNPA    | NA                 |
+
+## Bug Prediction
+

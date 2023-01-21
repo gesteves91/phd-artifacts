@@ -76,9 +76,14 @@ All data is available under the [data](data/) folder. Below, we present the fold
 | [**nasa**](data/nasa)                     | Contains the NASA data           |
 | [**unified**](data/unified)               | Contains the Unified data        |
 
-#### Explanations
+### Explanations
 
-Inside the [explanations](explanations/) folder, we have all SHAP explanations for each target. 
+Inside the [explanations](explanations/) folder, we have all SHAP explanations for each target presented in the thesis. Below, we present the folder's working tree. 
+
+| Folder                            | Content                                      |
+| --------------------------------- | -------------------------------------------- |
+| [**Chapter 5**](explanations/ch5) | Contains the SHAP explanations for Chapter 5 |
+| [**Chapter 7**](explanations/ch7) | Contains the SHAP explanations for Chapter 7 |
 
 ### Features
 

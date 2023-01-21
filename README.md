@@ -94,7 +94,7 @@ The complete list of features is available in the [features](features/) folder. 
 
 ### Models
 
-The models created in the study are available in the [models](models/) folder. Each target has its own `pickle` file. Note that some files are too large for GitHub storage, and you have to unzip the `zip` files to use the models (defect, gc, lc, and sc). Below, we present the folder's working tree.
+The models created in the study are available in the [models](models/) folder. Each target has its own `pickle` file. Note that some files inside the [Chapter 7](models/ch7) folder are too large for GitHub storage, and you have to unzip the `zip` files to use the models (defect, gc, lc, and sc). Furthermore, we are unable to store the Chapter 4 models inside Git as it has over 1 GB. Inside the [folder](models/ch4), we have instructions on how to download the models from Zenodo. Below, we present the folder's working tree.
 
 | Folder                      | Content                           |
 | --------------------------- | --------------------------------- |

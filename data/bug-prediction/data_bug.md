@@ -1,7 +1,7 @@
 # Bud Prediction Data
 
-| Folder                      | Content                                                  |
-| --------------------------- | -------------------------------------------------------- |
+| Folder                      | Content                               |
+| --------------------------- | ------------------------------------- |
 | [**equinox**](equinox/) | Contains the data for the equinox project |
 | [**jdt**](jdt/)         | Contains the data for the jdt project     |
 | [**lucene**](lucene/)   | Contains the data for the lucene project  |

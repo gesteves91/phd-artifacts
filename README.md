@@ -117,3 +117,5 @@ Inside the [scripts](scripts/) folder, we stored the [Organic](https://github.co
 ### Validation
 
 Inside the [validation](validation/) folder, we have the results of the validation of the Organic tool with developers.
+
+Feel free to contact me if you have any questions or suggestions.

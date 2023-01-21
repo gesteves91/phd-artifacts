@@ -71,7 +71,7 @@ All data is available under the [data](data/) folder. Below, we present the fold
 
 | Folder                                    | Content                          |
 | ----------------------------------------- | -------------------------------- |
-| [**bug-prediction**](data/bug-prediction) | Contains the Bug Prediction data |
+| [**bug-prediction**](data/bug-prediction/data_bug.md) | Contains the Bug Prediction data |
 | [**jureczko**](data/jureczko)             | Contains the Jureczko data       |
 | [**nasa**](data/nasa)                     | Contains the NASA data           |
 | [**unified**](data/unified)               | Contains the Unified data        |

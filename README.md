@@ -94,23 +94,21 @@ The complete list of features is available in the [features](features/) folder. 
 
 ### Models
 
-The models created in the study are available in the [models](models/) folder. Each target has its own `pickle` file. Note that some files inside the [Chapter 7](models/ch7) folder are too large for GitHub storage, and you have to unzip the `zip` files to use the models (defect, gc, lc, and sc). Furthermore, we are unable to store the Chapter 4 models inside Git as it has over 1 GB. Inside the [folder](models/ch4), we have instructions on how to download the models from Zenodo. Below, we present the folder's working tree.
+The models created in the study are available in the [models](models/) folder. Each target has its own `pickle` file. Note that some files inside the [Chapter 7](models/ch7) folder are too large for GitHub storage, and you have to unzip the `zip` files to use the models (defect, gc, lc, and sc). Furthermore, we are unable to store the Chapter 4 models inside Git as it has over 1 GB. Inside the [Chapter 4](models/ch4), we have instructions on how to download the models from Zenodo. Below, we present the folder's working tree.
 
 | Folder                      | Content                           |
 | --------------------------- | --------------------------------- |
 | [**Chapter 4**](models/ch4) | Contains the models for Chapter 4 |
 | [**Chapter 7**](models/ch7) | Contains the models for Chapter 7 |
 
-### Notebooks
+### Source Code
 
-The notebooks are organized as follows:
+The [src](src/) folder contains the source code to run the models. Below, we present the folder's working tree.
 
-- [01-setup.ipynb](notebooks/01-setup.ipynb): prepares, trains and executes the data for the study.
-- [02-predict.ipynb](notebooks/02-predict.ipynb): loads the models and predicts with unseen data.
-
-### Results
-
-The results are available in the [results](results/) folder. There, we have the performance of each model and the results of the statistical tests.
+| Folder                   | Content                                |
+| ------------------------ | -------------------------------------- |
+| [**Chapter 4**](src/ch4) | Contains the source code for Chapter 4 |
+| [**Chapter 7**](src/ch7) | Contains the source code for Chapter 7 |
 
 ### Scripts
 

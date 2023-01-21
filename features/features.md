@@ -1,10 +1,91 @@
 # Complete List of Features
 
-## Unified Dataset
+## Features Categories
 
-### Class-Level Metrics (60 static metrics - 55/60 Kept)
+### Class-Level
 
-#### Clone Metrics
+| Type | Acronym | Name                                       |
+|------|---------|--------------------------------------------|
+| CK   | WMC     | Weighted Method Count                      |
+| CK   | DIT     | Depth of Inheritance Tree                  |
+| CK   | RFC     | Response for Class                         |
+| CK   | NOC     | Number to children                         |
+| CK   | CBO     | Coupling Between Objects                   |
+| CK   | LCOM    | Lack of Cohesion in Methods                |
+| OO   | FanIn   | Number of classes that reference the class |
+| OO   | FanOut  | Number of classes referenced by the class  |
+| OO   | NOA     | Number of attributes                       |
+| OO   | NOPRA   | Number of private attributes               |
+| OO   | NOPUA   | Number of public attributes                |
+| OO   | NOAI    | Number of attributes inherited             |
+| OO   | LOC     | Number of lines of code                    |
+| OO   | NOM     | Number of methods                          |
+| OO   | NOPM    | Number of public methods                   |
+| OO   | NOPRM   | Number of private methods                  |
+| OO   | NOMI    | Number of methods inherited                |
+
+### Entropy
+
+| Acronym | Name                                               |
+|---------|----------------------------------------------------|
+| HCM     | History Complexity Measure                         |
+| WHCM    | Weighted History Complexity Measure                |
+| LinHCM  | Linearly Decayed History Complexity Measure        |
+| LogHCM  | LoGarithmically decayed History Complexity Measure |
+| ExpHCM  | Exponentially Decayed History Complexity Measure   |
+
+### Change
+
+| Acronym | Name                                            |
+|---------|-------------------------------------------------|
+| NR      | Number of revisions                             |
+| NREF    | Number of times file has been refactored        |
+| NFIX    | Number of times file was involved in bug-fixing |
+| NAUTH   | Number of authors who committed the file        |
+| LINES   | Lines added and removed (sum, max, average)     |
+| CHURN   | Codechurn (sum, maximum and average)            |
+| CHGSET  | Change set size (maximum and average)           |
+| AGE     | Age and weighted age                            |
+
+### Halstead and McCabe
+
+| Acronym             | Name                                |
+|---------------------|-------------------------------------|
+| Branch count        | Number of branches                  |
+| McCabe's complexity | Number of independent paths         |
+| McCabe's design     | Complexity of a module              |
+| McCabe's essential  | Degree of structuredness            |
+| Halstead content    | Independent complexity of a module  |
+| Halstead difficult  | Difficult to handle the module      |
+| Halstead level      | Inverse of the error proneness      |
+| Halstead effort     | Estimated mental effort             |
+| Halstead error      | Number of errors in module          |
+| Halstead length     | Operators and operands numbers      |
+| Halstead time       | Estimate time to develop module     |
+| Halstead volume     | Bits required to execute the module |
+| Operands            | Total number of operands            |
+| Operators           | Total number of operators           |
+| Unique operands     | Number of unique operands           |
+| Unique operators    | Number of unique operators          |
+
+### Additional
+
+| Acronym | Name                                          |
+|---------|-----------------------------------------------|
+| DAM     | Data Access Metric                            |
+| MOA     | Measure of Aggregation                        |
+| MFA     | Measure of Functional Abstraction             |
+| CAM     | Cohesion Among Methods of Class               |
+| IC      | Inheritance Coupling                          |
+| CBM     | Coupling Between Methods                      |
+| AMC     | Average Method Complexity                     |
+| Ca      | Afferent couplings                            |
+| Ce      | Efferent couplings                            |
+| CC      | McCabe's cyclomatic complexity (max and mean) |
+
+## Class-Level Quality Attributes (60 static metrics - 55/60 Kept)
+
+#### Clone
 
 | Acronym | Feature                                  | Status |
 | ------- | ---------------------------------------- | ------ |
@@ -99,7 +180,7 @@
 | TNLPA   | Total Number of Local Public Attributes  | Gone   |
 | TNPA    | Total Number of Public Attributes        | Gone   |
 
-### Removed due to high correlation (over 99%)
+#### Removed due to high correlation (over 99%)
 
 | Feature | Correlated Feature |
 |---------|--------------------|
@@ -108,6 +189,3 @@
 | TNA     | TNPA               |
 | TNLPA   | NLPA               |
 | TNPA    | NA                 |
-
-## Bug Prediction
-

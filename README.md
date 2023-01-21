@@ -65,19 +65,16 @@ python --version
 
 From there, you can run the notebooks in the [src](src/ch7) folder and the script in the [src](src/ch4). Below, we describe each folder contained in the repository.
 
-### Correlations
-
-There is a folder called [correlations](correlations/) with the respective correlation analysis divided by each quality attribute. The blue value indicates a low correlation, while the red represents a high correlation. As the paper mention, we first set our threshold to 99% of correlation and excluded the more general metrics, for instance, Total Number of Attributes (TNA). We then remove those features that had multicollinearity higher than 85%.
 ### Data
 
 All data is available under the [data](data/) folder. Below, we present the folder's working tree.
 
-| Folder                                    | Content                                            |
-| ----------------------------------------- | -------------------------------------------------- |
-| [**bug-prediction**](data/bug-prediction) | Contains the final dataset with defects and smells |
-| [**jureczko**](data/jureczko)             | Contains the projects used in the study            |
-| [**nasa**](data/nasa)                     | Contains the raw dataset with defects              |
-| [**unified**](data/unified)               | Contains the unseen dataset to test the models     |
+| Folder                                    | Content                          |
+| ----------------------------------------- | -------------------------------- |
+| [**bug-prediction**](data/bug-prediction) | Contains the Bug Prediction data |
+| [**jureczko**](data/jureczko)             | Contains the Jureczko data       |
+| [**nasa**](data/nasa)                     | Contains the NASA data           |
+| [**unified**](data/unified)               | Contains the Unified data        |
 
 #### Explanations
 

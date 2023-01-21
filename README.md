@@ -117,36 +117,3 @@ Inside the [scripts](scripts/) folder, we stored the [Organic](https://github.co
 ### Validation
 
 Inside the [validation](validation/) folder, we have the results of the validation of the Organic tool with developers.
-
-## Replication Instructions
-
-If the required packages are installed according to the Setup section of this document. You should be able to run each cell of the notebooks in the [notebooks](notebooks/) folder.
-
-### Code Smells Definitions
-
-In our study, we evaluate the following smells:
-
-| Code Smell                   | Definition                                                                                  | Reference |
-| ---------------------------- | ------------------------------------------------------------------------------------------- | --------- |
-| God Class                    | A large class that has too many responsibilities and centralizes the module functionality. | [3]       |
-| Refused Bequest              | A class that does not want to use its parent behavior.                                      | [2]       |
-| Spaghetti Code               | A class that has methods with large and unique multistage process flow.                     | [1]       |
-| Class Data Should be Private | A class with too many public fields.                                                        | [4]       |
-| Data Class                   | Classes that have only fields, getters, and setters.                                         | [2]       |
-| Lazy Class                   | Classes that have little behavior, with few methods and fields.                             | [2]       |
-| Speculative Generality       | Classes that support future behavior, usually interacting with test classes only.           | [2]       |
-
-To identify such smells we relied on the Organic tool. If you want to run the Organic tool to asses the smell collection process, you can, for instance, for the project `ant`, execute the following command:
-
-```bash
-java -jar organic-OPT.jar -sf ../projects/ant/organic/ant.json -src "../bad-smells-defects/projects/ant"
-```
-
-You can execute the `organic-OPT.jar` included inside the [scripts](scripts/) folder. We highlight that Organic needs to be run on OpenJDK 11, so you need to change the java version in case it is not the required one.
-
-##### References
-
-- [1] Brown, W.H., Malveau, R.C., McCormick, H.W.S., Mowbray, T.J.: AntiPatterns: refactoring software, architectures, and projects in crisis. John Wiley & Sons, Inc. (1998)
-- [2] Fowler, M.: Refactoring: Improving the Design of Existing Code. Addison-Wesley (1999)
-- [3] Riel, A.: Object Oriented Design Heuristics. Addison-Wesley Professional (1996)
-- [4] Shvets, A.: Dive into Design Patterns. Refactoring Guru (2021)

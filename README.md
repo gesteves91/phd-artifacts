@@ -17,6 +17,12 @@ You can cite the repository as follows:
 }
 ```
 
+## Hardware Requirements
+
+All experiments were performed on a machine with the following specifications:
+- 16 GB RAM
+- 8th generation Intel Core i7 processor (or equivalent)
+
 ## Setup
 
 To use the replication package, we recommend applying the dependencies included in the [requirements](requirements.txt) file. We strongly recommend using Python 3.9 Virtual Environment as follows, since Pycaret requires it.
@@ -57,58 +63,7 @@ pyenv global 3.9.0
 python --version
 ```
 
-From there, you can run the notebooks in the [notebooks](notebooks/) folder.
-
-### Code Smells Definitions
-
-In our study, we evaluate the following smells:
-
-| Code Smell                   | Definition                                                                                  | Reference |
-| ---------------------------- | ------------------------------------------------------------------------------------------- | --------- |
-| God Class                    | A large class that has too many responsibilities and centralizes the module functionality. | [3]       |
-| Refused Bequest              | A class that does not want to use its parent behavior.                                      | [2]       |
-| Spaghetti Code               | A class that has methods with large and unique multistage process flow.                     | [1]       |
-| Class Data Should be Private | A class with too many public fields.                                                        | [4]       |
-| Data Class                   | Classes that have only fields, getters, and setters.                                         | [2]       |
-| Lazy Class                   | Classes that have little behavior, with few methods and fields.                             | [2]       |
-| Speculative Generality       | Classes that support future behavior, usually interacting with test classes only.           | [2]       |
-
-To identify such smells we relied on the Organic tool. If you want to run the Organic tool to asses the smell collection process, you can, for instance, for the project `ant`, execute the following command:
-
-```bash
-java -jar organic-OPT.jar -sf ../projects/ant/organic/ant.json -src "../bad-smells-defects/projects/ant"
-```
-
-You can execute the `organic-OPT.jar` included inside the [scripts](scripts/) folder. We highlight that Organic needs to be run on OpenJDK 11, so you need to change the java version in case it is not the required one. 
-
-### Open-Source Java Projects
-
-Our dataset is composed of the following systems and their source code can be found in the folder data/projects. 
-
-- Ant 1.7
-- Broadleaf 3.0
-- Camel 1.6
-- Elasticsearch 0.9
-- Hazelcast 3.3
-- JDT 3.4
-- Jedit 4.3
-- Lucene 4.3
-- Neo4J 1.9
-- OrientDB 1.6
-- PDE 3.4
-- POI 3.0
-- Titan 0.5
-- Xalan 2.7
-
-## Hardware Requirements
-
-The experiments were performed on a machine with the following specifications:
-- 16 GB RAM
-- 8th generation Intel Core i7 processor (or equivalent)
-
-## Test Instructions
-
-You can run the notebooks in the [notebooks](notebooks/) folder. Below, we describe each folder contained in the repository.
+From there, you can run the notebooks in the [src](src/ch7) folder and the script in the [src](src/ch4). Below, we describe each folder contained in the repository.
 
 ### Correlations
 
@@ -117,14 +72,12 @@ There is a folder called [correlations](correlations/) with the respective corre
 
 All data is available under the [data](data/) folder. Below, we present the folder's working tree.
 
-| Folder                        | Content                                            |
-| ----------------------------- | -------------------------------------------------- |
-| [**final**](data/final)       | Contains the final dataset with defects and smells |
-| [**projects**](data/projects) | Contains the projects used in the study            |
-| [**raw**](data/raw)           | Contains the raw dataset with defects              |
-| [**unseen**](data/unseen)     | Contains the unseen dataset to test the models     |
-
-Each project folder has all `csv` files with the information about the code smells. The files follow this naming pattern: `organic<code_smell>.csv`
+| Folder                                    | Content                                            |
+| ----------------------------------------- | -------------------------------------------------- |
+| [**bug-prediction**](data/bug-prediction) | Contains the final dataset with defects and smells |
+| [**jureczko**](data/jureczko)             | Contains the projects used in the study            |
+| [**nasa**](data/nasa)                     | Contains the raw dataset with defects              |
+| [**unified**](data/unified)               | Contains the unseen dataset to test the models     |
 
 #### Explanations
 
@@ -163,6 +116,28 @@ Inside the [validation](validation/) folder, we have the results of the validati
 ## Replication Instructions
 
 If the required packages are installed according to the Setup section of this document. You should be able to run each cell of the notebooks in the [notebooks](notebooks/) folder.
+
+### Code Smells Definitions
+
+In our study, we evaluate the following smells:
+
+| Code Smell                   | Definition                                                                                  | Reference |
+| ---------------------------- | ------------------------------------------------------------------------------------------- | --------- |
+| God Class                    | A large class that has too many responsibilities and centralizes the module functionality. | [3]       |
+| Refused Bequest              | A class that does not want to use its parent behavior.                                      | [2]       |
+| Spaghetti Code               | A class that has methods with large and unique multistage process flow.                     | [1]       |
+| Class Data Should be Private | A class with too many public fields.                                                        | [4]       |
+| Data Class                   | Classes that have only fields, getters, and setters.                                         | [2]       |
+| Lazy Class                   | Classes that have little behavior, with few methods and fields.                             | [2]       |
+| Speculative Generality       | Classes that support future behavior, usually interacting with test classes only.           | [2]       |
+
+To identify such smells we relied on the Organic tool. If you want to run the Organic tool to asses the smell collection process, you can, for instance, for the project `ant`, execute the following command:
+
+```bash
+java -jar organic-OPT.jar -sf ../projects/ant/organic/ant.json -src "../bad-smells-defects/projects/ant"
+```
+
+You can execute the `organic-OPT.jar` included inside the [scripts](scripts/) folder. We highlight that Organic needs to be run on OpenJDK 11, so you need to change the java version in case it is not the required one.
 
 ##### References
 

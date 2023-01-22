@@ -38,8 +38,6 @@ for c in range(1, 50):
     feat.append('feature')
 
 # Generate the combinations
-
-
 def random_combinations(iterable, r, x):
     pool = tuple(iterable)
     n = len(pool)
@@ -80,9 +78,8 @@ def eval_features(df, features):
 
     return a, b
 
+
 # Evaluate the with the panel
-
-
 def eval_panel(df, comb):
     for ff in comb:
         f = []
@@ -92,9 +89,8 @@ def eval_panel(df, comb):
         print("%s,%f" % (f, np.mean(A)))
         sys.stdout.flush()
 
+
 # Check the best models
-
-
 def check_best_models(acc, features):
     global best_models, best_generated_model, feat
 
@@ -152,6 +148,7 @@ for c in range(1, 5):
     comb = random_combinations(WANTED_COLUMNS, c, s)
     eval_panel(df, comb)
 
+# Save the resulted models
 joblib.dump(models, 'models.pkl')
 
 print('program complete!!!')

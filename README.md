@@ -25,7 +25,7 @@ All experiments were performed on a machine with the following specifications:
 
 ## Software Requirements
 
-All experiments were performed using Ubuntu 18, 20 or 22. We recommend using Linux to replicate the experiments.
+All experiments were performed using Ubuntu 18, 20 or 22. We recommend using Linux to test the repository artifacts.
 
 ## Setup
 

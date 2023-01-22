@@ -63,7 +63,7 @@ pyenv global 3.9.0
 python --version
 ```
 
-From there, you can run the notebooks in the [src](src/ch7) folder and the script in the [src](src/ch4). Below, we describe each folder contained in the repository.
+From there, you can run the notebooks and script in the [Chapter 7](src/ch7) and [Chapter 4](src/ch4) folders. Below, we describe each folder contained in the repository.
 
 ### Data
 
@@ -78,7 +78,7 @@ All data is available under the [data](data/) folder. Below, we present the fold
 
 ### Explanations
 
-Inside the [explanations](explanations/) folder, we have all SHAP explanations for each target presented in the thesis. Below, we present the folder's working tree. 
+Inside the [explanations](explanations/) folder, we have all SHAP explanations for each target presented in the thesis. Below, we present the folder's working tree.
 
 | Folder                            | Content                                      |
 | --------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ The complete list of features is available in the [features](features/) folder. 
 
 ### Models
 
-The models created in the study are available in the [models](models/) folder. Each target has its own `pickle` file. Note that some files inside the [Chapter 7](models/ch7) folder are too large for GitHub storage, and you have to unzip the `zip` files to use the models (defect, gc, lc, and sc). Furthermore, we are unable to store the Chapter 4 models inside Git as it has over 1 GB. Inside the [Chapter 4](models/ch4), we have instructions on how to download the models from Zenodo. Below, we present the folder's working tree.
+The models created in the study are available in the [models](models/) folder. Each target has its own `pickle` file. Furthermore, we are unable to store the Chapter 4 models inside GitHub as it has over 1 GB. Inside [Chapter 4](models/ch4), we have instructions on how to download the models from Zenodo. Below, we present the folder's working tree.
 
 | Folder                      | Content                           |
 | --------------------------- | --------------------------------- |
@@ -108,7 +108,7 @@ The [src](src/) folder contains the source code to run the models. Below, we pre
 | Folder                   | Content                                |
 | ------------------------ | -------------------------------------- |
 | [**Chapter 4**](src/ch4) | Contains the source code for Chapter 4 |
-| [**Chapter 7**](src/ch7) | Contains the source code for Chapter 7 |
+| [**Chapter 7**](src/ch7) | Contains the notebooks for Chapter 7   |
 
 ### Scripts
 

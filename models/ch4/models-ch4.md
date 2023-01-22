@@ -2,7 +2,7 @@
 
 Due to GitHub limitations, we cannot store the models in this repository. Instead, we uploaded them to Zenodo and provided the link [here](https://zenodo.org/record/7513974).
 
-We can cite the models as follows:
+You can cite the models as follows:
 
 ```bibtex
 @dataset{models_usxgb_23,

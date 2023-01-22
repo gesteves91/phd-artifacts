@@ -1,6 +1,6 @@
 # Open-Source Java Projects
 
-Our dataset is composed of the following systems and their source code can be found in the folder [data](data/unified/projects). 
+Our dataset is composed of the following systems and their source code can be found in the folder [data](../../data/unified/projects). 
 
 - Ant 1.7
 - Broadleaf 3.0

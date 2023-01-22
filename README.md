@@ -23,6 +23,10 @@ All experiments were performed on a machine with the following specifications:
 - 16 GB RAM
 - 8th generation Intel Core i7 processor (or equivalent)
 
+## Software Requirements
+
+All experiments were performed using Ubuntu 18, 20 or 22. We recommend using Linux to replicate the experiments.
+
 ## Setup
 
 To use the replication package, we recommend applying the dependencies included in the [requirements](requirements.txt) file. We strongly recommend using Python 3.9 Virtual Environment as follows, since Pycaret requires it.
